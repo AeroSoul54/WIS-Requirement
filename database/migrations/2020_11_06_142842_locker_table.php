@@ -13,6 +13,16 @@ class LockerTable extends Migration
      */
     public function up()
     {
+        Schema::create('locker', function(Blueprint $table){
+            $table->id();
+            $table->string('building_name');
+            $table->string('locker_floor')->unique();
+            $table->string('rent_sdate')->unique();
+            $table->string('rent_edate')->unique();
+            $table->string('reservation_status')->unique();
+            
+            $table->timestamps()
+        }
         //
     }
 
