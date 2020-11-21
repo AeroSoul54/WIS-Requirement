@@ -5,6 +5,7 @@
 	<div class="container">
 		<h4>Edit Equipments Form</h4>
 		<br />
+		@include('layouts.errors')
 		<form method="POST" action="/equipments/{{ $equipment->id }}">
 			@method('PUT')
 			@csrf
