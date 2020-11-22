@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDevicesBorrowedTable extends Migration
+class CreateBooksBorrowedTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateDevicesBorrowedTable extends Migration
      */
     public function up()
     {
-        Schema::create('devices_borrowed', function (Blueprint $table) {
+        Schema::create('books_borrowed', function (Blueprint $table) {
             $table->id();
-            $table->integer("device_id");
-            $table->string('Title', 45);
-            $table->string('Author', 45);
+            $table->integer('book_id');
             $table->integer('student_id');
             $table->date('date_time_borrowed');
             $table->date('return_due_date');
             $table->date('date_returned');
+            $table->decimal('Penalty_in_Peso', 8, 2);
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ class CreateDevicesBorrowedTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('devices_borrowed');
+        Schema::dropIfExists('books_borrowed');
     }
 }

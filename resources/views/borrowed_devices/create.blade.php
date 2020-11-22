@@ -9,8 +9,6 @@
             <label for="inputNameOfDevice">Device ID</label>
             <input type="number" class="form-control" id="nputNameOfDevice" name="device_id">
           </div>
-        
-        
           <div class="form-group" >
             <label for="inputStudentId">Student ID</label>
             <input type="text" class="form-control" id="inputStudentId" name="student_id">

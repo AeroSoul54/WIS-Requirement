@@ -45,6 +45,10 @@ Route::get('/borrowed_devices/{borrowed_device}/edit','borrowed_devicesControlle
 Route::put('/borrowed_devices/{borrowed_device}','borrowed_devicesController@update');//update
 
 Route::get('/borrowed_devices/{borrowed_device}/delete','borrowed_devicesController@delete');//Delete
+//STUDENTS
+Route::get('/students','StudentsController@index');//index
+
+Route::get('/students/create','StudentsController@create');//create
 
 
 // Index of CRUD
@@ -65,8 +69,18 @@ Route::get('/equipments/{equipment}/edit', 'EquipmentsController@edit');
 // Update
 Route::put('/equipments/{equipment}', 'EquipmentsController@update');
 
-
 // Del
 // Route::delete('/equipments/{equipment}', 'EquipmentsController@delete');
 Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
+
+Route::get('/students/{student}','StudentsController@show');//show
+
+Route::post('/students','StudentsController@store'); //store
+
+Route::get('/students/{student}/edit','StudentsController@edit');//edit
+
+Route::put('/students/{student}','StudentsController@update');//update
+
+Route::get('/students/{student}/delete','StudentsController@delete');//Delete
+
 

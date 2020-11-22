@@ -19,9 +19,6 @@ class CreateBooksTable extends Migration
              $table->string('Title', 45);
              $table->string('Author', 45);
              $table->string('Category', 45);
-             $table->date('Rent_Date');
-             $table->date('Due_Date');
-             $table->decimal('Penalty', 8, 2);
             $table->timestamps();
         });
     }
