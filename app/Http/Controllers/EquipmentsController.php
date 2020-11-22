@@ -27,6 +27,18 @@ class EquipmentsController extends Controller
 
     public function store() 
     { 
+
+        request()->validate([
+
+            'name' => 'required',
+            'number_of_item' => 'required',
+            'facility' => 'required',
+            'facilitator' => 'required',
+            'rent_start_date' => 'required',
+            'rent_end_date' => 'required'
+
+        ]);
+
     	$equipment = new Equipment;
         $equipment->name = request()->name;
         $equipment->number_of_item = request()->number_of_item;
@@ -47,13 +59,20 @@ class EquipmentsController extends Controller
 
     public function update(Equipment $equipment)
     {
-        $equipment->name = request()->name;
-        $equipment->number_of_item = request()->number_of_item;
-        $equipment->facility = request()->facility;
-        $equipment->facilitator = request()->facilitator;
-        $equipment->rent_start_date = request()->rent_start_date;
-        $equipment->rent_end_date = request()->rent_end_date;
-        $equipment->save();
+
+        $validated_fields = request()->validate([
+
+            'name' => 'required',
+            'number_of_item' => 'required',
+            'facility' => 'required',
+            'facilitator' => 'required',
+            'rent_start_date' => 'required',
+            'rent_end_date' => 'required'
+
+        ]);
+
+    
+        $equipment->update($validated_fields);
 
         return redirect('/equipments');
     }
