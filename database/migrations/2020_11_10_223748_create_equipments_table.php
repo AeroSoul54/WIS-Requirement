@@ -34,4 +34,4 @@ class CreateEquipmentsTable extends Migration
     {
         Schema::dropIfExists('equipments');
     }
-}
+

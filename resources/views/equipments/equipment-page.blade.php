@@ -10,13 +10,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="http://fontenele.github.io/bootstrap-navbar-dropdowns/" target="_blank">Students</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="/equipments" target="_blank">Equipments</a>
             </li>
             <li class="nav-item">
@@ -83,11 +83,3 @@
         </form>
     </div>
 </div>
-
-<main role="main" class="container">
-    <div class="jumbotron text-center">
-        <h1>Home Page</h1>
-        <p class="lead text-info">Welcome</p>
-        <a href="http://fontenele.github.io/bootstrap-navbar-dropdowns/">Github</a>
-    </div>
-</main>
