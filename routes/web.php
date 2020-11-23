@@ -32,49 +32,29 @@ Route::get('/users/{user}/delete','UsersController@delete');
 /*Devices*/
 
 Route::get('/devices','devicesController@index');//index
-
 Route::get('/devices/create','devicesController@create');//create
-
 Route::get('/devices/{device}','devicesController@show');//show
-
 Route::post('/devices','devicesController@store'); //store
-
 Route::get('/devices/{device}/edit','devicesController@edit');//edit
-
 Route::put('/devices/{device}','devicesController@update');//update
-
 Route::get('/devices/{device}/delete','devicesController@delete');//Delete
 
 //devices = devices_borrowed, device = device_borrowed
 Route::get('/borrowed_devices','borrowed_devicesController@index');//index
-
 Route::get('/borrowed_devices/create','borrowed_devicesController@create');//create
-
 Route::get('/borrowed_devices/{borrowed_device}','borrowed_devicesController@show');//show
-
 Route::post('/borrowed_devices','borrowed_devicesController@store'); //store
-
 Route::get('/borrowed_devices/{borrowed_device}/edit','borrowed_devicesController@edit');//edit
-
 Route::put('/borrowed_devices/{borrowed_device}','borrowed_devicesController@update');//update
-
 Route::get('/borrowed_devices/{borrowed_device}/delete','borrowed_devicesController@delete');//Delete
 
 /*Students*/
 Route::get('/students','StudentsController@index');//index
-
 Route::get('/students/create','StudentsController@create');//create
-
-/*Students*/
-
 Route::get('/students/{student}','StudentsController@show');//show
-
 Route::post('/students','StudentsController@store'); //store
-
 Route::get('/students/{student}/edit','StudentsController@edit');//edit
-
 Route::put('/students/{student}','StudentsController@update');//update
-
 Route::get('/students/{student}/delete','StudentsController@delete');//Delete
 
 /*Books*/
@@ -115,6 +95,23 @@ Route::put('/equipments/{equipment}', 'EquipmentsController@update');
 // Del
 Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
 
+/*Locker*/
+Route::get('/lockers','LockersController@index');//index
+Route::get('/lockers/create','LockersController@create');//create
+Route::get('/lockers/{locker}','LockersController@show');//show
+Route::post('/lockers','LockersController@store'); //store
+Route::get('/lockers/{locker}/edit','LockersController@edit');//edit
+Route::put('/lockers/{locker}','LockersController@update');//update
+Route::get('/lockers/{locker}/delete','LockersController@delete');//Delete
+
+/*Locker Rentings*/
+Route::get('/lockerrentings','LockersRentingController@index');//index
+Route::get('/lockerrentings/create','LockersRentingController@create');//create
+Route::get('/lockerrentings/{lockerrenting}','LockersRentingController@show');//show
+Route::post('/lockerrentings','LockersRentingController@store'); //store
+Route::get('/lockerrentings/{lockerrenting}/edit','LockersRentingController@edit');//edit
+Route::put('/lockerrentings/{lockerrenting}','LockersRentingController@update');//update
+Route::get('/lockerrentings/{lockerrenting}/delete','LockersRentingController@delete');//Delete
 
 /*Login*/
 
