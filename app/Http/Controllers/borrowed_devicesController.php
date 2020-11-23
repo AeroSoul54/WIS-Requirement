@@ -26,6 +26,15 @@ class borrowed_devicesController extends Controller
     }
     public function store()
     {
+
+        request()->validate([
+            'device_id' => 'required',
+            'student_id' => 'required',
+            'date_time_borrowed' => 'required',
+            'return_due_date' => 'required',
+            'date_returned' => 'required',
+            ]);
+
         $borrowed_device = new borrowed_device;
         $borrowed_device->device_id = request()->device_id;
         $borrowed_device->student_id = request()->student_id;
@@ -43,13 +52,21 @@ class borrowed_devicesController extends Controller
     }
     public function update(borrowed_device $borrowed_device)
     {
-   
+        request()->validate([
+            'device_id' => 'required',
+            'student_id' => 'required',
+            'date_time_borrowed' => 'required',
+            'return_due_date' => 'required',
+            'date_returned' => 'required',
+            ]);
+            
         $borrowed_device = new borrowed_device;
         $borrowed_device->device_id = request()->device_id;
         $borrowed_device->student_id = request()->student_id;
         $borrowed_device->date_time_borrowed = request()->date_time_borrowed;
         $borrowed_device->return_due_date = request()->return_due_date;
         $borrowed_device->date_returned = request()->date_returned;
+
         $borrowed_device->save();
         return redirect('/borrowed_devices');
 

@@ -2,12 +2,13 @@
 @section('container')
 <div class="container">
     <h5>Create Device Form</h5>
+    @include('layouts.errors')
     <form method="POST" action="/devices">
         @csrf
         
         <div class="form-group" >
             <label for="inputNameOfDevice">Name of the Device</label>
-            <input type="text" class="form-control" id="nputNameOfDevice" name="name">
+            <input type="text" class="form-control" id="nputNameOfDevice" name="name" >
           </div>
         
         
