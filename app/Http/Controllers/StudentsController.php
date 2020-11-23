@@ -29,7 +29,7 @@ class StudentsController extends Controller
         $student = new Student;
         $student->first_name = request()->first_name;
         $student->last_name = request()->last_name;
-        $student->college_dept = request()->college_department;
+        $student->college_department = request()->college_department;
         $student->save();
         return redirect('/students');
 
@@ -43,7 +43,7 @@ class StudentsController extends Controller
     {
         $student->first_name = request()->first_name;
         $student->last_name = request()->last_name;
-        $student->college_dept = request()->college_department;
+        $student->college_department = request()->college_department;
         $student->save();
         return redirect('/students');
 

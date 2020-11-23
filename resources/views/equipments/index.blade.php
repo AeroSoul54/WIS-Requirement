@@ -4,7 +4,12 @@
 	<center><h3>Equipments</h3></center>
 	<br />
 	<br />
+
 <div class="container">
+	<a href="equipments/create">Create Form</a>
+	<br />
+	<br />
+	
 	<table class="table">
 		<thead>
 			<tr>

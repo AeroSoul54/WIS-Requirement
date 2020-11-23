@@ -16,8 +16,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="http://fontenele.github.io/bootstrap-navbar-dropdowns/" target="_blank">Students</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/equipments" target="_blank">Equipments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/equipments" target="_blank">Login</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#"></a>

@@ -20,8 +20,9 @@
                 <a class="nav-link" href="/equipments" target="_blank">Equipments</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#"></a>
+                <a class="nav-link" href="/login" target="_blank">Login</a>
             </li>
+
    
             {{-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown 1</a>
@@ -86,9 +87,32 @@
 
 <main role="main" class="container">
     <div class="jumbotron text-center">
-        <h1>Home Page</h1>
-        <p class="lead text-info">Welcome</p>
-        <a href="http://fontenele.github.io/bootstrap-navbar-dropdowns/">Github</a>
+
+  <!-- Title -->
+  <h2 class="card-title h2">UC Borrowing System</h2>
+  <!-- Subtitle -->
+  <p class="blue-text my-4 font-weight-bold">a requirement for web information system</p>
+
+  <!-- Grid row -->
+  <div class="row d-flex justify-content-center">
+
+    <!-- Grid column    
+    <div class="col-xl-7 pb-2">
+
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium, fugit consequatur ducimus obcaecati numquam molestias hic itaque accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div> -->
+    <!-- Grid column -->
+  </div>
+  <!-- Grid row -->
+  <hr class="my-4">
+
+  <div class="pt-2">
+    
+    <a href="/login" class="btn btn-primary">Login</a>
+  </div>
+
+</div>
+                
 
     </div>
 </main>
