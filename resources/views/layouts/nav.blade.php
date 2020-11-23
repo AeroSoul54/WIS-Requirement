@@ -14,9 +14,6 @@
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/students" target="_blank">Students</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/equipments" target="_blank">Equipments</a>
             </li>
             <li class="nav-item">
@@ -25,20 +22,26 @@
             <li class="nav-item">
                 <a class="nav-link" href="/devices" target="_blank">Devices</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/devices" target="_blank">Colleges</a>
-            </li>
         
 
             
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                    <li class="dropdown-item" href="/colleges"><a>Colleges</a></li>
+                    <li class="dropdown-item" href="/students"><a>Students</a></li>
                     <li class="dropdown-item" href="/borrowed_devices"><a>Borrowed Devices</a></li>
-                    <li class="dropdown-item dropdown">
                             </li>
                         </ul>
                     </li>
+
+                    <li class="nav-item">
+                <a class="nav-link" href="/register" target="_blank">Register</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/login" target="_blank">Login</a>
+            </li>
+
                 </ul>
             </li>
         </ul>
