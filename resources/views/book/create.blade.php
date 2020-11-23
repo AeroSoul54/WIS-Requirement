@@ -2,6 +2,8 @@
 
 @section('container')
 
+@include('layouts.errors')
+
 <h5>Borrow a books</h5>
 <p>Fill up form</p>
 
@@ -13,27 +15,27 @@
 <div class="row">
 	<div class="col-first">
         <div class="input-field col s6">
-          <input placeholder="ex. The Fault in our Stars" type="text" class="validate" name="title">
+          <input placeholder="ex. The Fault in our Stars" type="text" class="validate" name="title" required>
           <label>Book Title</label>
         </div>    
 
         <div class="input-field col s6">
-          <input  placeholder="ex. John Green" type="text" class="validate" name="author">
+          <input  placeholder="ex. John Green" type="text" class="validate" name="author" required>
           <label>Author</label>
         </div>
   
         <div class="input-field col s6">
-          <input placeholder="ex. Fiction" type="text" class="validate" name="category">
+          <input placeholder="ex. Fiction" type="text" class="validate" name="category" required>
           <label>Category</label>
         </div>
 
         <div class="input-field col s6">
-          <input placeholder="ex. YYYY-MM-DD" type="date" class="validate" name="rent_date">
+          <input placeholder="ex. YYYY-MM-DD" type="date" class="validate" name="rent_date" required>
           <label>Date Rent</label>
         </div>   
 
         <div class="input-field col s6">
-          <input  placeholder="ex. YYYY-MM-DD" type="date" class="validate" name="due_date">
+          <input  placeholder="ex. YYYY-MM-DD" type="date" class="validate" name="due_date" required>
           <label>Due</label>
         </div>
 
@@ -49,8 +51,7 @@
 </form>
 
 </div>
-<br>
-<h6><a href="/">Cancel</a></h6>
+<h6><a href="/books">Cancel</a></h6>
 </div>
 
 

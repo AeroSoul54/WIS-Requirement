@@ -42,7 +42,16 @@ class BooksController extends Controller
     	$book->Penalty = request()->penalty;
     	$book->save();
 
-    	return redirect('/'); 
+        $validator = request()->validate([
+        'title' => 'required',
+        'author' => 'required',
+        'category' => 'required',
+        'rent_date' => 'required|date',
+        'due_date' => 'required|date',
+        'penalty' => 'nullable']);
+
+
+    	return redirect('/books'); 
     }
 
 //Update Record
@@ -57,6 +66,14 @@ class BooksController extends Controller
     	$book->Penalty = request()->penalty;
     	$book->save();
 
+        $validator = request()->validate([
+        'title' => 'required',
+        'author' => 'required',
+        'category' => 'required',
+        'rent_date' => 'required|date',
+        'due_date' => 'required|date',
+        'penalty' => 'nullable']);
+
     	return redirect('/books/'.$book->id); 
     }
 
@@ -70,7 +87,7 @@ class BooksController extends Controller
  	public function remove(Book $book)
  	{
  		$book->delete();
- 		return redirect('/');
+ 		return redirect('/books');
  	}
 
 

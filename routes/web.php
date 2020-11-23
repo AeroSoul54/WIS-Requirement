@@ -87,18 +87,17 @@ Route::post('/students','StudentsController@store'); //store
 
 Route::get('/students/{student}/edit','StudentsController@edit');//edit
 
-Route::put('/students/{student}','StudentsController@update');//update
+Route::put('/students/{student}','StudentsController@update');//update 
 
 Route::get('/students/{student}/delete','StudentsController@delete');//Delete
 
 /*Books*/
 //show all
-Route::get('/', 'BooksController@index');
+Route::get('/books', 'BooksController@index');
 // GET create display form
 Route::get('/books/create', 'BooksController@create');
 //New record
 Route::post('/books', 'BooksController@store');
-
 //WILDCARDS
 // PUT edit display form
 Route::get('/books/{book}/edit', 'BooksController@edit');
@@ -112,8 +111,8 @@ Route::get('/books/{id}', 'BooksController@show');
 // GET delete 
 Route::delete('/books/{book}', 'BooksController@remove');
 
-/*Login*/
 
-Route::get('/login', 'LoginController@index');
+/*Login*/
+//Route::get('/login', 'LoginController@index');
 
 
