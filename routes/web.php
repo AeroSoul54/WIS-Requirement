@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-//Devices
+
+/*Devices*/
+
 Route::get('/devices','devicesController@index');//index
 
 Route::get('/devices/create','devicesController@create');//create
@@ -46,11 +48,14 @@ Route::get('/borrowed_devices/{borrowed_device}/edit','borrowed_devicesControlle
 Route::put('/borrowed_devices/{borrowed_device}','borrowed_devicesController@update');//update
 
 Route::get('/borrowed_devices/{borrowed_device}/delete','borrowed_devicesController@delete');//Delete
-//STUDENTS
+
+/*Students*/
 Route::get('/students','StudentsController@index');//index
 
 Route::get('/students/create','StudentsController@create');//create
 
+
+/*Equipments*/
 
 // Index of CRUD
 Route::get('/equipments', 'EquipmentsController@index');
@@ -74,6 +79,8 @@ Route::put('/equipments/{equipment}', 'EquipmentsController@update');
 // Route::delete('/equipments/{equipment}', 'EquipmentsController@delete');
 Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
 
+/*Students*/
+
 Route::get('/students/{student}','StudentsController@show');//show
 
 Route::post('/students','StudentsController@store'); //store
@@ -84,13 +91,11 @@ Route::put('/students/{student}','StudentsController@update');//update
 
 Route::get('/students/{student}/delete','StudentsController@delete');//Delete
 
+/*Books*/
 //show all
 Route::get('/', 'BooksController@index');
-
 // GET create display form
 Route::get('/books/create', 'BooksController@create');
-
-
 //New record
 Route::post('/books', 'BooksController@store');
 
@@ -106,4 +111,9 @@ Route::get('/books/{id}', 'BooksController@show');
 
 // GET delete 
 Route::delete('/books/{book}', 'BooksController@remove');
+
+/*Login*/
+
+Route::get('/login', 'LoginController@index');
+
 
