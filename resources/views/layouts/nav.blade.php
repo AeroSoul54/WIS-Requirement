@@ -10,8 +10,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="http://fontenele.github.io/bootstrap-navbar-dropdowns/" target="_blank">Students</a>
@@ -22,19 +22,21 @@
             <li class="nav-item">
                 <a class="nav-link" href="/login" target="_blank">Login</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register" target="_blank">Register</a>
+            </li>
 
-   
             {{-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown 1</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown1">
                     <li class="dropdown-item" href="#"><a>College Department</a></li>
                     <li class="dropdown-item dropdown">
-                        
+
                         <a class="dropdown-toggle" id="dropdown1-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown1.1</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown1-1">
                             <li class="dropdown-item" href="#"><a>Action 1.1</a></li>
                             <li class="dropdown-item dropdown">
-                                
+
                                 <a class="dropdown-toggle" id="dropdown1-1-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown1.1.1</a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdown1-1-1">
                                     <li class="dropdown-item" href="#"><a>Action 1.1.1</a></li>
@@ -77,7 +79,12 @@
                     </li>
                 </ul>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
         </ul>
+        
+
         <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -85,34 +92,31 @@
     </div>
 </div>
 
+
 <main role="main" class="container">
     <div class="jumbotron text-center">
 
-  <!-- Title -->
-  <h2 class="card-title h2">UC Borrowing System</h2>
-  <!-- Subtitle -->
-  <p class="blue-text my-4 font-weight-bold">a requirement for web information system</p>
+      <!-- Title -->
+      <h2 class="card-title h2">UC Borrowing System</h2>
+      <!-- Subtitle -->
+      <p class="blue-text my-4 font-weight-bold">a requirement for web information system</p>
 
-  <!-- Grid row -->
-  <div class="row d-flex justify-content-center">
+      <!-- Grid row -->
+      <div class="row d-flex justify-content-center">
 
     <!-- Grid column    
     <div class="col-xl-7 pb-2">
 
       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium, fugit consequatur ducimus obcaecati numquam molestias hic itaque accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div> -->
-    <!-- Grid column -->
-  </div>
-  <!-- Grid row -->
-  <hr class="my-4">
-
-  <div class="pt-2">
-    
-    <a href="/login" class="btn btn-primary">Login</a>
-  </div>
-
+  </div> -->
+  <!-- Grid column -->
 </div>
-                
+<!-- Grid row -->
 
-    </div>
+
+<center><div class="col-md-6">
+    <a href="/register" class="btn btn-primary">Register</a>
+    <a href="/login" class="btn btn-primary">Login</a>
+</div></center>
+
 </main>

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('welcome');
 });
 
 /*Users*/
@@ -102,33 +102,30 @@ Route::delete('/books/{book}', 'BooksController@remove');
 
 // Index of CRUD
 Route::get('/equipments', 'EquipmentsController@index');
-
 // Create
 Route::get('/equipments/create', 'EquipmentsController@create');
-
 // Show - Read of CRUD 
 Route::get('/equipments/{equipment}', 'EquipmentsController@show');
-
 // Store
 Route::post('/equipments', 'EquipmentsController@store');
-
 // Edit
 Route::get('/equipments/{equipment}/edit', 'EquipmentsController@edit');
-
 // Update
 Route::put('/equipments/{equipment}', 'EquipmentsController@update');
-
 // Del
-// Route::delete('/equipments/{equipment}', 'EquipmentsController@delete');
 Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
-
 
 
 /*Login*/
 
-Route::get('/login', 'LoginController@index');
+Route::get('/login', 'LoginController@index')->name('login');
+Route::post('/login', 'LoginController@login');
+Route::get('/register', 'LoginController@register');
+Route::post('/register', 'LoginController@store');
 
-
-Route::get('/dashboard', 'DashboardController@index');
+Route::middleware(['auth'])->group(function() {
+	Route::get('/dashboard', 'DashboardController@index');
+	Route::get('/logout', 'LoginController@logout');
+});
 
 
