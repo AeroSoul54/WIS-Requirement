@@ -18,6 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*Users*/
+
+Route::get('/users', 'UsersController@index');
+Route::get('/users/create', 'UsersController@create');
+Route::get('/users/{user}', 'UsersController@show');
+Route::post('/users', 'UsersController@store');
+Route::get('/users/{user}/edit', 'UsersController@edit');
+Route::put('/users/{user}', 'UsersController@update');
+Route::get('/users/{user}/delete','UsersController@delete');
+
+
 /*Devices*/
 
 Route::get('/devices','devicesController@index');//index
@@ -54,31 +65,6 @@ Route::get('/students','StudentsController@index');//index
 
 Route::get('/students/create','StudentsController@create');//create
 
-
-/*Equipments*/
-
-// Index of CRUD
-Route::get('/equipments', 'EquipmentsController@index');
-
-// Create
-Route::get('/equipments/create', 'EquipmentsController@create');
-
-// Show - Read of CRUD 
-Route::get('/equipments/{equipment}', 'EquipmentsController@show');
-
-// Store
-Route::post('/equipments', 'EquipmentsController@store');
-
-// Edit
-Route::get('/equipments/{equipment}/edit', 'EquipmentsController@edit');
-
-// Update
-Route::put('/equipments/{equipment}', 'EquipmentsController@update');
-
-// Del
-// Route::delete('/equipments/{equipment}', 'EquipmentsController@delete');
-Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
-
 /*Students*/
 
 Route::get('/students/{student}','StudentsController@show');//show
@@ -112,8 +98,37 @@ Route::get('/books/{id}', 'BooksController@show');
 // GET delete 
 Route::delete('/books/{book}', 'BooksController@remove');
 
+/*Equipments*/
+
+// Index of CRUD
+Route::get('/equipments', 'EquipmentsController@index');
+
+// Create
+Route::get('/equipments/create', 'EquipmentsController@create');
+
+// Show - Read of CRUD 
+Route::get('/equipments/{equipment}', 'EquipmentsController@show');
+
+// Store
+Route::post('/equipments', 'EquipmentsController@store');
+
+// Edit
+Route::get('/equipments/{equipment}/edit', 'EquipmentsController@edit');
+
+// Update
+Route::put('/equipments/{equipment}', 'EquipmentsController@update');
+
+// Del
+// Route::delete('/equipments/{equipment}', 'EquipmentsController@delete');
+Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
+
+
+
 /*Login*/
 
 Route::get('/login', 'LoginController@index');
+
+
+Route::get('/dashboard', 'DashboardController@index');
 
 
