@@ -1,4 +1,4 @@
-@extends('equipments.master-equipment')
+@extends('layouts.master')
 @section('container')
 <br />
 <br />

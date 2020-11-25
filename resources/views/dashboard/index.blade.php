@@ -9,6 +9,8 @@
 			<h1><center>Welcome {{ auth()->user()->name }}</center></h1>
 		</h3>
 
+		
+
         
     </div>
 

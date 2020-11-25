@@ -1,4 +1,4 @@
-@extends('equipments.master-equipment')
+@extends('layouts.master')
 @section('container')
 <body>
 	<center><h3>Users or Facilitators</h3></center>

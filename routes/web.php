@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::get('/', function () {
-	return view('welcome');
+	return view('layouts.home');
 });
+
 
 /*Users*/
 
@@ -79,7 +79,7 @@ Route::get('/students/{student}/delete','StudentsController@delete');//Delete
 
 /*Books*/
 //show all
-Route::get('/', 'BooksController@index');
+Route::get('/books', 'BooksController@index');
 // GET create display form
 Route::get('/books/create', 'BooksController@create');
 //New record
