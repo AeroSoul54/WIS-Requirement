@@ -39,7 +39,17 @@ class BooksController extends Controller
     	$book->Category = request()->category;
     	$book->save();
 
+<<<<<<< Updated upstream
     	return redirect('/'); 
+=======
+        $validator = request()->validate([
+        'title' => 'required',
+        'author' => 'required',
+        'category' => 'required',]);
+
+
+    	return redirect('/books'); 
+>>>>>>> Stashed changes
     }
 
 //Update Record
@@ -51,6 +61,14 @@ class BooksController extends Controller
     	$book->Category = request()->category;
     	$book->save();
 
+<<<<<<< Updated upstream
+=======
+        $validator = request()->validate([
+        'title' => 'required',
+        'author' => 'required',
+        'category' => 'required']);
+
+>>>>>>> Stashed changes
     	return redirect('/books/'.$book->id); 
     }
 
