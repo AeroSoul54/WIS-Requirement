@@ -28,7 +28,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/borrowed_devices" >Borrowed Devices</a>
             </li>
-            {{-- <li class="nav-item">
+            <li class="nav-item">
+                <a class="nav-link" href="/rental_history/books" >Borrowed Books</a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" href="/login" target="_blank">Login</a>
             </li> --}}
           

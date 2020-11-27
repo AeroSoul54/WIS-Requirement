@@ -84,7 +84,6 @@ Route::get('/books', 'BooksController@index');
 Route::get('/books/create', 'BooksController@create');
 //New record
 Route::post('/books', 'BooksController@store');
-
 //WILDCARDS
 // PUT edit display form
 Route::get('/books/{book}/edit', 'BooksController@edit');
@@ -93,10 +92,25 @@ Route::get('/books/{book}/edit', 'BooksController@edit');
 Route::put('/books/{book}', 'BooksController@update');
 
 // GET view individually
-Route::get('/books/{id}', 'BooksController@show');
+Route::get('/books/{book}', 'BooksController@show');
 
 // GET delete 
 Route::delete('/books/{book}', 'BooksController@remove');
+
+//books borrowed
+Route::get('/rental_history/books','BooksBorrowedController@index');//index
+
+Route::get('/rental_history/books/create','BooksBorrowedController@create');//create
+
+Route::get('/rental_history/books/{borrowedBook}','BooksBorrowedController@show');//show
+
+Route::post('/rental_history/books','BooksBorrowedController@store'); //store
+
+Route::get('/rental_history/books/{borrowedBook}/edit','BooksBorrowedController@edit');//edit
+
+Route::put('/rental_history/books/{borrowedBook}','BooksBorrowedController@update');//update
+
+Route::get('/rental_history/books/{borrowedBook}/delete','BooksBorrowedController@delete');//Delete
 
 /*Equipments*/
 
@@ -114,6 +128,9 @@ Route::get('/equipments/{equipment}/edit', 'EquipmentsController@edit');
 Route::put('/equipments/{equipment}', 'EquipmentsController@update');
 // Del
 Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
+
+
+
 
 
 /*Login*/

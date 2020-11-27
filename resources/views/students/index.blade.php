@@ -5,6 +5,7 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th>Student ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>College Department</th>
@@ -15,6 +16,7 @@
             @foreach ($students as $student)
             <tr>
                 <td>{{ $student->id }}</td>
+                <td>{{ $student->id_number }}</td>
                 <td>{{ $student->first_name }}</td>
                 <td>{{ $student->last_name }}</td>     
                 <td>{{ $student->college_department }}</td>     

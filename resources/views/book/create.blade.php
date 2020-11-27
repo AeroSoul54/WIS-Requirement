@@ -26,21 +26,6 @@
           <input placeholder="ex. Fiction" type="text" class="validate" name="category">
           <label>Category</label>
         </div>
-
-        <div class="input-field col s6">
-          <input placeholder="ex. YYYY-MM-DD" type="date" class="validate" name="rent_date">
-          <label>Date Rent</label>
-        </div>   
-
-        <div class="input-field col s6">
-          <input  placeholder="ex. YYYY-MM-DD" type="date" class="validate" name="due_date">
-          <label>Due</label>
-        </div>
-
-        <div class="input-field col s6">
-          <input placeholder="ex. 80.75" type="decimal" class="validate" name="penalty">
-          <label>Penalty</label>
-        </div>
         
     </div>  
 </div>
