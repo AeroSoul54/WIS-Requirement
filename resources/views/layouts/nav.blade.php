@@ -23,7 +23,7 @@
                 <a class="nav-link" href="/devices" >Devices</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/borrowed_devices" >Borrowed Devices</a>
+                <a class="nav-link" href="/rental_history/devices" >Borrowed Devices</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/rental_history/books" >Borrowed Books</a>

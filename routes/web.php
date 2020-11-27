@@ -87,10 +87,8 @@ Route::post('/books', 'BooksController@store');
 //WILDCARDS
 // PUT edit display form
 Route::get('/books/{book}/edit', 'BooksController@edit');
-
 // Edit a book record
 Route::put('/books/{book}', 'BooksController@update');
-
 // GET view individually
 Route::get('/books/{book}', 'BooksController@show');
 
@@ -102,13 +100,15 @@ Route::get('/rental_history/books','BooksBorrowedController@index');//index
 
 Route::get('/rental_history/books/create','BooksBorrowedController@create');//create
 
-Route::get('/rental_history/books/{borrowedBook}','BooksBorrowedController@show');//show
+Route::get('/rental_history/books/{borrowedBook}','BooksBorrowedController@update');//update
 
 Route::post('/rental_history/books','BooksBorrowedController@store'); //store
 
+Route::get('/rental_history/books/{borrowedBook}','BooksBorrowedController@show');//show
+
 Route::get('/rental_history/books/{borrowedBook}/edit','BooksBorrowedController@edit');//edit
 
-Route::put('/rental_history/books/{borrowedBook}','BooksBorrowedController@update');//update
+
 
 Route::get('/rental_history/books/{borrowedBook}/delete','BooksBorrowedController@delete');//Delete
 

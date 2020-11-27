@@ -24,13 +24,8 @@
                  <td>{{ $borrowedBook->id }}</td>  
                 <td>{{ $borrowedBook->dateTime_borrowed }}</td>     
                 <td>{{ $borrowedBook->due_date }}</td>     
-                <td> <a href="/rental_history/books/{{ $borrowedBook->id }}">Show</a>
-                |
-                  <a href="/rental_history/books/{{ $borrowedBook->id }}/edit">Edit</a>
-                |
-                @csrf
-                 <a href="/rental_history/books/{{ $borrowedBook->id }}/delete">Delete</a> 
-                </td>         
+                <td> <a href="/rental_history/books/{{ $borrowedBook->id }}/edit">Edit</a>
+                | {{ $borrowedBook->date_returned }}
                 <td>
                    <a href="/rental_history/books/{{ $borrowedBook->id }}">Show</a>
                 |
