@@ -2,6 +2,7 @@
 @section('container')
 <div class="container">
     <h5>Create Device Form</h5>
+    @include('layouts.errors')
     <form method="POST" action="/borrowed_devices">
         @csrf
         

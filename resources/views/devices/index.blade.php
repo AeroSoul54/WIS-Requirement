@@ -1,6 +1,9 @@
 @extends('layouts.master')
 @section('container')
 <div class="container">
+    <h1> Devices</h1>
+    <a href="/devices/create">Add Devices</a>
+
     <table class="table">
         <thead>
             <tr>
@@ -24,10 +27,7 @@
                       <a href="/devices/{{ $device->id }}/delete">Delete</a>
                     
                    
-              {{-- <form method='POST' action='/devices/{{ $device->id }}'>
-                    @method('DELETE')
-                  @csrf
-                    <button type="submit">Delete </button> --}}
+              
                 </td>
             </tr>
                 

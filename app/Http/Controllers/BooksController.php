@@ -16,9 +16,9 @@ class BooksController extends Controller
     }
 
 // Show individually
-    public function show($id)
+    public function show()
     {
-    	$book = Book::find($id);
+    	//$book = Book::find($id);
     	return view('book.show', compact('book'));
     }
 
@@ -37,9 +37,6 @@ class BooksController extends Controller
     	$book->Title = request()->title;
     	$book->Author = request()->author;
     	$book->Category = request()->category;
-    	$book->Rent_Date = request()->rent_date;
-    	$book->Due_Date = request()->due_date;
-    	$book->Penalty = request()->penalty;
     	$book->save();
 
         $validator = request()->validate([
@@ -61,9 +58,6 @@ class BooksController extends Controller
     	$book->Title = request()->title;
     	$book->Author = request()->author;
     	$book->Category = request()->category;
-    	$book->Rent_Date = request()->rent_date;
-    	$book->Due_Date = request()->due_date;
-    	$book->Penalty = request()->penalty;
     	$book->save();
 
         $validator = request()->validate([

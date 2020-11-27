@@ -13,10 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::get('/', function () {
-    return view('welcome');
+	return view('layouts.home');
 });
+
+
+/*Users*/
+
+Route::get('/users', 'UsersController@index');
+Route::get('/users/create', 'UsersController@create');
+Route::get('/users/{user}', 'UsersController@show');
+Route::post('/users', 'UsersController@store');
+Route::get('/users/{user}/edit', 'UsersController@edit');
+Route::put('/users/{user}', 'UsersController@update');
+Route::get('/users/{user}/delete','UsersController@delete');
+
 
 /*Devices*/
 
@@ -54,31 +65,6 @@ Route::get('/students','StudentsController@index');//index
 
 Route::get('/students/create','StudentsController@create');//create
 
-
-/*Equipments*/
-
-// Index of CRUD
-Route::get('/equipments', 'EquipmentsController@index');
-
-// Create
-Route::get('/equipments/create', 'EquipmentsController@create');
-
-// Show - Read of CRUD 
-Route::get('/equipments/{equipment}', 'EquipmentsController@show');
-
-// Store
-Route::post('/equipments', 'EquipmentsController@store');
-
-// Edit
-Route::get('/equipments/{equipment}/edit', 'EquipmentsController@edit');
-
-// Update
-Route::put('/equipments/{equipment}', 'EquipmentsController@update');
-
-// Del
-// Route::delete('/equipments/{equipment}', 'EquipmentsController@delete');
-Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
-
 /*Students*/
 
 Route::get('/students/{student}','StudentsController@show');//show
@@ -87,7 +73,7 @@ Route::post('/students','StudentsController@store'); //store
 
 Route::get('/students/{student}/edit','StudentsController@edit');//edit
 
-Route::put('/students/{student}','StudentsController@update');//update 
+Route::put('/students/{student}','StudentsController@update');//update
 
 Route::get('/students/{student}/delete','StudentsController@delete');//Delete
 
@@ -106,13 +92,57 @@ Route::get('/books/{book}/edit', 'BooksController@edit');
 Route::put('/books/{book}', 'BooksController@update');
 
 // GET view individually
-Route::get('/books/{id}', 'BooksController@show');
+Route::get('/books/{book}', 'BooksController@show');
 
 // GET delete 
 Route::delete('/books/{book}', 'BooksController@remove');
 
+//books borrowed
+Route::get('/rental_history/books','BooksBorrowedController@index');//index
+
+Route::get('/rental_history/books/create','BooksBorrowedController@create');//create
+
+Route::get('/rental_history/books/{borrowedBook}','BooksBorrowedController@show');//show
+
+Route::post('/rental_history/books','BooksBorrowedController@store'); //store
+
+Route::get('/rental_history/books/{borrowedBook}/edit','BooksBorrowedController@edit');//edit
+
+Route::put('/rental_history/books/{borrowedBook}','BooksBorrowedController@update');//update
+
+Route::get('/rental_history/books/{borrowedBook}/delete','BooksBorrowedController@delete');//Delete
+
+/*Equipments*/
+
+// Index of CRUD
+Route::get('/equipments', 'EquipmentsController@index');
+// Create
+Route::get('/equipments/create', 'EquipmentsController@create');
+// Show - Read of CRUD 
+Route::get('/equipments/{equipment}', 'EquipmentsController@show');
+// Store
+Route::post('/equipments', 'EquipmentsController@store');
+// Edit
+Route::get('/equipments/{equipment}/edit', 'EquipmentsController@edit');
+// Update
+Route::put('/equipments/{equipment}', 'EquipmentsController@update');
+// Del
+Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
+
+
+
+
 
 /*Login*/
-//Route::get('/login', 'LoginController@index');
+
+Route::get('/login', 'LoginController@index')->name('login');
+Route::post('/login', 'LoginController@login');
+Route::get('/register', 'LoginController@register');
+Route::post('/register', 'LoginController@store');
+
+Route::middleware(['auth'])->group(function() {
+	Route::get('/dashboard', 'DashboardController@index');
+	Route::get('/logout', 'LoginController@logout');
+});
 
 

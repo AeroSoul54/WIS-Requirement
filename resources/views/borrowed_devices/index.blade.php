@@ -1,8 +1,12 @@
 @extends('layouts.master')
 @section('container')
 <div class="container">
+    <h1> Devices</h1>
+    <a href="/borrowed_devices/create"> Borrowed Devices</a>
+
     <table class="table">
         <thead>
+            
             <tr>
                 <th>ID</th>
                 <th>Device ID</th>

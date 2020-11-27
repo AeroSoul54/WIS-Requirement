@@ -22,7 +22,7 @@
           <div class="form-group" >
             <label for="inputDTborrowed">Date and Time Borrowed</label>
             <input type="datetime-local" value="2011-08-19T13:45:00" class="form-control" id="inputDTborrowed" name="date_time_borrowed"
-            value="{{$borrowed_device->dateTime_borrowed}}">
+            value="{{$borrowed_device->date_time_borrowed}}">
           </div>
           <div class="form-group" >
             <label for="inputReturnDue">Return Due Date</label>

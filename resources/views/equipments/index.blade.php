@@ -1,15 +1,12 @@
-@extends('equipments.master-equipment')
+@extends('layouts.master')
 @section('container')
 <body>
-	<center><h3>Equipments</h3></center>
-	<br />
-	<br />
-
-<div class="container">
-	<a href="equipments/create">Create Form</a>
-	<br />
-	<br />
+	<h3>Equipments</h3>
+	<a href="/equipment/create">Create Form</a>
 	
+<div class="container">
+
+
 	<table class="table">
 		<thead>
 			<tr>

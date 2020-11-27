@@ -12,9 +12,6 @@
 				<th>Book Title</th>
 				<th>Book Author</th>
 				<th>Book Category</th>
-				<th>Date Rented</th>
-				<th>Date Due</th>
-				<th>Penalty</th>
 			</tr>
 		</thead>
 		
@@ -26,9 +23,6 @@
 		<td> {{ $book->Title }} </td>
 		<td> {{ $book->Author }} </td>
 		<td> {{ $book->Category }} </td>
-		<td> {{ $book->Rent_Date }} </td>
-		<td> {{ $book->Due_Date }} </td>
-		<td> {{ $book->Penalty }} </td>
 	</tr>
 			@endforeach
 		</tbody>

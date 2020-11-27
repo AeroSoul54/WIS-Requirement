@@ -15,10 +15,10 @@ class CreateBooksBorrowedTable extends Migration
     {
         Schema::create('books_borrowed', function (Blueprint $table) {
             $table->id();
-            $table->integer('book_id');
-            $table->integer('student_id');
-            $table->date('date_time_borrowed');
-            $table->date('return_due_date');
+            $table->unsignedInteger('book_id');
+            $table->unsignedInteger('student_id');
+            $table->dateTime('dateTime_borrowed');
+            $table->date('due_date');
             $table->date('date_returned');
             $table->decimal('Penalty_in_Peso', 8, 2);
             $table->timestamps();
