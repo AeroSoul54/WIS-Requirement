@@ -4,15 +4,12 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
-    <a class="navbar-brand" href="#">UC System</a>
+    <a class="navbar-brand" href="/">UC System</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="/students">Students</a>
             </li>
@@ -34,7 +31,7 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="/login" target="_blank">Login</a>
-            </li> --}}
+            </li> 
           
         </ul>
         

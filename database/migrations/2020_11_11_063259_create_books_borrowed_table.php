@@ -17,7 +17,7 @@ class CreateBooksBorrowedTable extends Migration
             $table->id();
             $table->unsignedInteger('book_id');
             $table->unsignedInteger('student_id');
-            $table->dateTime('dateTime_borrowed');
+            $table->dateTime('datetime_borrowed');
             $table->date('due_date');
             $table->date('date_returned');
             $table->decimal('Penalty_in_Peso', 8, 2);
