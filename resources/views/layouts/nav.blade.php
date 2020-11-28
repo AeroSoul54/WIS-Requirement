@@ -9,7 +9,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto ">
             <li class="nav-item">
                 <a class="nav-link" href="/students">Students</a>
             </li>
@@ -17,7 +17,7 @@
                 <a class="nav-link" href="/books" >Books</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/borrowed_equipments" >Borrowed Equipments</a>
+                <a class="nav-link" href="/equipments" >Equipments</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/devices" >Devices</a>
@@ -28,7 +28,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/rental_history/books" >Borrowed Books</a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="/borrowed_equipments">Borrowed Equipments</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="/login" target="_blank">Login</a>
             </li> 
