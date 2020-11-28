@@ -17,7 +17,7 @@
                 <a class="nav-link" href="/books" >Books</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/equipments" >Equipments</a>
+                <a class="nav-link" href="/borrowed_equipments" >Borrowed Equipments</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/devices" >Devices</a>

@@ -6,7 +6,7 @@
 		<h4>Create Equipments Form</h4>
 		<br />
 		@include('layouts.errors')
-		<form method="POST" action="/equipments">
+		<form method="POST" action="/borrowed_equipments">
 			@csrf
 			<div class="row">
 				<div class="form-group col-md-6">

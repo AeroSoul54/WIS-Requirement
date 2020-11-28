@@ -6,7 +6,7 @@
 		<h4>Edit Equipments Form</h4>
 		<br />
 		@include('layouts.errors')
-		<form method="POST" action="/equipments/{{ $equipment->id }}">
+		<form method="POST" action="/borrowed_equipments/{{ $borrowed_equipment->id }}">
 			@method('PUT')
 			@csrf
 			<div class="row">
@@ -21,23 +21,23 @@
 				</div>
 				<div class="form-group col-md-6">
 					<strong><label for="exampleInputEmail1">Name of the Equipment:</label></strong>
-					<input type="text" class="form-control" id="exampleInputPassword1" name="name" value="{{ $equipment->name}}">
+					<input type="text" class="form-control" id="exampleInputPassword1" name="name" value="{{ $borrowed_equipment->name}}">
 				</div>
 				<div class="form-group col-md-6">
 					<strong><label for="exampleInputEmail1">Number of Equipments:</label></strong>
-					<input type="text" class="form-control" id="exampleInputPassword1" name="number_of_item" value="{{ $equipment->number_of_item}}">
+					<input type="text" class="form-control" id="exampleInputPassword1" name="number_of_item" value="{{ $borrowed_equipment->number_of_item}}">
 				</div>
 				<div class="form-group col-md-6">
 					<strong><label for="exampleInputEmail1">Facilitator:</label></strong>
-					<input type="text" class="form-control" id="exampleInputPassword1" name="facilitator" value="{{ $equipment->facilitator}}">
+					<input type="text" class="form-control" id="exampleInputPassword1" name="facilitator" value="{{ $borrowed_equipment->facilitator}}">
 				</div>
 				<div class="form-group col-md-6">
 					<strong><label for="exampleInputEmail1">Rent Start Date:</label></strong>
-					<input type="text" class="form-control" id="exampleInputPassword1" name="rent_start_date" placeholder="YYYY-MM-DD" value="{{ $equipment->rent_start_date}}">
+					<input type="text" class="form-control" id="exampleInputPassword1" name="rent_start_date" placeholder="YYYY-MM-DD" value="{{ $borrowed_equipment->rent_start_date}}">
 				</div>
 				<div class="form-group col-md-6">
 					<strong><label for="exampleInputEmail1">Rent End Date:</label></strong>
-					<input type="text" class="form-control" id="exampleInputPassword1" name="rent_end_date" placeholder="YYYY-MM-DD" value="{{ $equipment->rent_end_date}}">
+					<input type="text" class="form-control" id="exampleInputPassword1" name="rent_end_date" placeholder="YYYY-MM-DD" value="{{ $borrowed_equipment->rent_end_date}}">
 				</div>
 
 				<button type="submit" class="btn btn-primary">Submit</button> 
