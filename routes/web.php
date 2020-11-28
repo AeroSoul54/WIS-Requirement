@@ -68,13 +68,9 @@ Route::get('/students/create','StudentsController@create');//create
 /*Students*/
 
 Route::get('/students/{student}','StudentsController@show');//show
-
 Route::post('/students','StudentsController@store'); //store
-
 Route::get('/students/{student}/edit','StudentsController@edit');//edit
-
 Route::put('/students/{student}','StudentsController@update');//update
-
 Route::get('/students/{student}/delete','StudentsController@delete');//Delete
 
 /*Books*/
@@ -91,25 +87,16 @@ Route::get('/books/{book}/edit', 'BooksController@edit');
 Route::put('/books/{book}', 'BooksController@update');
 // GET view individually
 Route::get('/books/{book}', 'BooksController@show');
-
 // GET delete 
 Route::delete('/books/{book}', 'BooksController@remove');
 
 //books borrowed
 Route::get('/rental_history/books','BooksBorrowedController@index');//index
-
 Route::get('/rental_history/books/create','BooksBorrowedController@create');//create
-
-Route::get('/rental_history/books/{borrowedBook}','BooksBorrowedController@update');//update
-
 Route::post('/rental_history/books','BooksBorrowedController@store'); //store
-
 Route::get('/rental_history/books/{borrowedBook}','BooksBorrowedController@show');//show
-
 Route::get('/rental_history/books/{borrowedBook}/edit','BooksBorrowedController@edit');//edit
-
-
-
+Route::put('/rental_history/books/{borrowedBook}','BooksBorrowedController@update');//update
 Route::get('/rental_history/books/{borrowedBook}/delete','BooksBorrowedController@delete');//Delete
 
 /*Equipments*/

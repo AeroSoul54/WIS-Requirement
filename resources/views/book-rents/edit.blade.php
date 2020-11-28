@@ -31,6 +31,11 @@
             <input type="date" class="form-control" name="date_returned"
             value="{{$borrowedBook->date_returned}}" required>
           </div>
+          <div class="form-group" >
+            <label>Penalty</label>
+            <input type="" class="form-control" name="Penalty_in_Peso"
+            value="{{$borrowedBook->Penalty_in_Peso}}" required>
+          </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form> 
 </div>

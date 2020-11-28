@@ -55,11 +55,12 @@ class BooksBorrowedController extends Controller
 
     public function update(BorrowedBook $borrowedBook)
     {
-        $borrowedBook->book_id = request()->device_id;
+        $borrowedBook->book_id = request()->book_id;
         $borrowedBook->student_id = request()->student_id;
-        $borrowedBook->dateTime_borrowed = request()->date_time_borrowed;
-        $borrowedBook->due_date = request()->return_due_date;
+        $borrowedBook->dateTime_borrowed = request()->dateTime_borrowed;
+        $borrowedBook->due_date = request()->due_date;
         $borrowedBook->date_returned = request()->date_returned;
+        $borrowedBook->Penalty_in_peso = request()->Penalty_in_Peso;
         $borrowedBook->save();
 
          $validator = request()->validate([
@@ -67,8 +68,9 @@ class BooksBorrowedController extends Controller
             'student_id' => 'required',
             'dateTime_borrowed' => 'required',
             'due_date' => 'required',
+            'date_returned' => 'required',
+            'Penalty_in_Peso' => 'required'
             ]);
-            
         
         return redirect('/rental_history/books/');
     }
