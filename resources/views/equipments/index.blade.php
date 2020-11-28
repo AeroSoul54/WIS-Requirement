@@ -1,48 +1,34 @@
 @extends('layouts.master')
 @section('container')
-<body>
-	<h3>Equipments</h3>
-	<a href="/equipment/create">Create Form</a>
-	
 <div class="container">
-
-
-	<table class="table">
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Name</th>
-				<th>Number of Items Borrowed</th>
-				<th>Facility</th>
-				<th>Facilitator</th>
-				<th>Rent Start Date</th>
-				<th>Rent End Date</th>
-				<th>Actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach( $equipments as $equipment)
-			<tr>
-				<td>{{ $equipment->id }} </td>
-				<td>{{ $equipment->name }} </td>
-				<td>{{ $equipment->number_of_item}}</td>
-				<td>{{ $equipment->facility}}</td>
-				<td>{{ $equipment->facilitator}}</td>
-				<td>{{ $equipment->rent_start_date}}</td>
-				<td>{{ $equipment->rent_end_date}}</td>
-				
-				<td>
-					<a href="/equipments/{{ $equipment->id }}">Show</a>
-					|
-					<a href="/equipments/{{ $equipment->id }}/edit">Edit</a>
-					|
-					<a href="/equipments/{{ $equipment->id }}/delete">Delete</a>
-					
-				</td>  
-			</tr>
-			@endforeach
-		</tbody> 
-	</table>
+    <h1>Equipments</h1>
+    <a href="/equipments/create">Add Equipment</a>
+    <br />
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name of the Equipment</th>
+                <th>Model or Type Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($equipments as $equipment)
+            <tr>
+                <td>{{ $equipment->id }}</td>
+                <td>{{ $equipment->name }}</td>
+                <td>{{ $equipment->model}}</td>            
+                <td>
+                    <a href="/equipments/{{ $equipment->id }}/edit">Edit</a>
+                    |
+                    <a href="/equipments/{{ $equipment->id }}/delete">Delete</a>
+                </td>
+            </tr> 
+            @endforeach
+        </tbody>
+    </table>
 </div>
-</body>
+    
 @endsection

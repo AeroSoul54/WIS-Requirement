@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEquipmentsTable extends Migration
+class CreateBorrowedDevicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateEquipmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('equipments', function (Blueprint $table) {
+        Schema::create('borrowed_devices', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('number_of_item');
-            $table->date('rent_start_date');
-            $table->date('rent_end_date');
-            $table->string('facility');
-            $table->string('facilitator');
+            $table->integer("device_id");
+            $table->integer('student_id');
+            $table->date('date_time_borrowed');
+            $table->date('return_due_date');
+            $table->date('date_returned');
             $table->timestamps();
         });
     }
@@ -32,7 +31,6 @@ class CreateEquipmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('equipments');
+        Schema::dropIfExists('borrowed_devices');
     }
-
 }
