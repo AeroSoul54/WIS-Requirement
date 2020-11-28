@@ -11,5 +11,9 @@ class Student extends Model
 
     public function borrowedBooks(){
     	return $this->belongsToMany(BorrowedBook::class);
+ 
+    }
+    public function borrowed_devices(){
+    	return $this->belongsToMany(borrowed_devices::class);
     }
 }

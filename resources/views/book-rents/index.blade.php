@@ -22,7 +22,7 @@
             @foreach ($borrowedBooks as $borrowedBook)
             <tr>
                  <td>{{ $borrowedBook->id }}</td>  
-                <td>{{ $borrowedBook->dateTime_borrowed }}</td>     
+                <td>{{ $borrowedBook->datetime_borrowed }}</td>     
                 <td>{{ $borrowedBook->due_date }}</td>     
                 <td> <a href="/rental_history/books/{{ $borrowedBook->id }}/edit">Edit</a>
                 | {{ $borrowedBook->date_returned }}
