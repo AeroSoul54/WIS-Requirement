@@ -9,7 +9,7 @@ class Book extends Model
     //
     protected $table = 'books';
 
-     public function borrowedBooks(){
+     public function borrowed_books(){
     	return $this->belongsTo(BorrowedBook::class);
     }
 
