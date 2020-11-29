@@ -16,7 +16,7 @@ class BooksController extends Controller
     }
 
 // Show individually
-    public function show()
+    public function show(Book $book)
     {
     	//$book = Book::find($id);
     	return view('book.show', compact('book'));
@@ -39,7 +39,13 @@ class BooksController extends Controller
     	$book->Category = request()->category;
     	$book->save();
 
-    	return redirect('/'); 
+        $validator = request()->validate([
+        'title' => 'required',
+        'author' => 'required',
+        'category' => 'required']);
+
+
+    	return redirect('/books'); 
     }
 
 //Update Record
@@ -51,7 +57,12 @@ class BooksController extends Controller
     	$book->Category = request()->category;
     	$book->save();
 
-    	return redirect('/books/'.$book->id); 
+        $validator = request()->validate([
+        'title' => 'required',
+        'author' => 'required',
+        'category' => 'required']);
+
+    	return redirect('/books'); 
     }
 
  // Edit
@@ -64,7 +75,7 @@ class BooksController extends Controller
  	public function remove(Book $book)
  	{
  		$book->delete();
- 		return redirect('/');
+ 		return redirect('/books');
  	}
 
 

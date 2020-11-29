@@ -2,7 +2,7 @@
 @section('container')
 <div class="container">
     <h1> Devices</h1>
-    <a href="/devices/create">Add Devices</a>
+    <a href="/devices/create">Borrow a Devices</a>
 
     <table class="table">
         <thead>
@@ -16,12 +16,10 @@
         <tbody>
             @foreach ($devices as $device)
             <tr>
-                 <td>{{ $device->id }}</td>
+                <td><a href="/devices/{{ $device->id }}"> {{ $device->id }} </a></td>
                 <td>{{ $device->name }}</td>
                 <td>{{ $device->serial_number }}</td>            
                 <td>
-                    <a href="/devices/{{ $device->id }}">Show</a>
-                |
                     <a href="/devices/{{ $device->id }}/edit">Edit</a>
                 |
                       <a href="/devices/{{ $device->id }}/delete">Delete</a>
