@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\borrowed_device;
+use App\Student;
+use App\Device;
 use Illuminate\Http\Request;
 
 class borrowed_devicesController extends Controller

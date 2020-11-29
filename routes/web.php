@@ -68,13 +68,9 @@ Route::get('/students/create','StudentsController@create');//create
 /*Students*/
 
 Route::get('/students/{student}','StudentsController@show');//show
-
 Route::post('/students','StudentsController@store'); //store
-
 Route::get('/students/{student}/edit','StudentsController@edit');//edit
-
 Route::put('/students/{student}','StudentsController@update');//update
-
 Route::get('/students/{student}/delete','StudentsController@delete');//Delete
 
 /*Books*/
@@ -97,40 +93,27 @@ Route::delete('/books/{book}', 'BooksController@remove');
 //books borrowed
 Route::get('/rental_history/books','BooksBorrowedController@index');//index
 Route::get('/rental_history/books/create','BooksBorrowedController@create');//create
-Route::get('/rental_history/books/{borrowedBook}','BooksBorrowedController@show');//show
 Route::post('/rental_history/books','BooksBorrowedController@store'); //store
+Route::get('/rental_history/books/{borrowedBook}','BooksBorrowedController@show');//show
 Route::get('/rental_history/books/{borrowedBook}/edit','BooksBorrowedController@edit');//edit
 Route::put('/rental_history/books/{borrowedBook}','BooksBorrowedController@update');//update
 Route::get('/rental_history/books/{borrowedBook}/delete','BooksBorrowedController@delete');//Delete
 
-/*Borrowed Devices*/
-
-Route::get('/borrowed_devices','borrowed_devicesController@index');//index
-Route::get('/borrowed_devices/create','borrowed_devicesController@create');//create
-Route::get('/borrowed_devices/{borrowed_device}','borrowed_devicesController@show');//show
-Route::post('/borrowed_devices','borrowed_devicesController@store'); //store
-Route::get('/borrowed_devices/{borrowed_device}/edit','borrowed_devicesController@edit');//edit
-Route::put('/borrowed_devices/{borrowed_device}','borrowed_devicesController@update');//update
-Route::get('/borrowed_devices/{borrowed_device}/delete','borrowed_devicesController@delete');//Delete
-
-/*Borrowed Equipments*/
-
-Route::get('/borrowed_equipments', 'borrowed_equipmentsController@index');
-Route::get('/borrowed_equipments/create', 'borrowed_equipmentsController@create');
-Route::get('/borrowed_equipments/{borrowed_equipment}', 'borrowed_equipmentsController@show');
-Route::post('/borrowed_equipments', 'borrowed_equipmentsController@store');
-Route::get('/borrowed_equipments/{borrowed_equipment}/edit', 'borrowed_equipmentsController@edit');
-Route::put('/borrowed_equipments/{borrowed_equipment}', 'borrowed_equipmentsController@update');
-Route::get('/borrowed_equipments/{borrowed_equipment}/delete', 'borrowed_equipmentsController@delete');
-
-
 /*Equipments*/
 
+// Index of CRUD
 Route::get('/equipments', 'EquipmentsController@index');
+// Create
 Route::get('/equipments/create', 'EquipmentsController@create');
+// Show - Read of CRUD 
+Route::get('/equipments/{equipment}', 'EquipmentsController@show');
+// Store
 Route::post('/equipments', 'EquipmentsController@store');
+// Edit
 Route::get('/equipments/{equipment}/edit', 'EquipmentsController@edit');
+// Update
 Route::put('/equipments/{equipment}', 'EquipmentsController@update');
+// Del
 Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
 
 

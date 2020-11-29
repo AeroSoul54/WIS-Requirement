@@ -17,8 +17,13 @@
             <input type="number" class="form-control" id="inputSerialNumber" name="serial_number">
           </div>
        
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form> 
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form> 
+</div>
+<br>
+<h6><a href="/">Cancel</a></h6>
 </div>
     
 @endsection
