@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\borrowed_equipment;
+use App\Student;
+use App\Equipment;
 use Illuminate\Http\Request;
 
 class borrowed_equipmentsController extends Controller

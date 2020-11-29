@@ -103,15 +103,6 @@ Route::get('/rental_history/books/{borrowedBook}/edit','BooksBorrowedController@
 Route::put('/rental_history/books/{borrowedBook}','BooksBorrowedController@update');//update
 Route::get('/rental_history/books/{borrowedBook}/delete','BooksBorrowedController@delete');//Delete
 
-/*Borrowed Devices*/
-
-Route::get('/borrowed_devices','borrowed_devicesController@index');//index
-Route::get('/borrowed_devices/create','borrowed_devicesController@create');//create
-Route::get('/borrowed_devices/{borrowed_device}','borrowed_devicesController@show');//show
-Route::post('/borrowed_devices','borrowed_devicesController@store'); //store
-Route::get('/borrowed_devices/{borrowed_device}/edit','borrowed_devicesController@edit');//edit
-Route::put('/borrowed_devices/{borrowed_device}','borrowed_devicesController@update');//update
-Route::get('/borrowed_devices/{borrowed_device}/delete','borrowed_devicesController@delete');//Delete
 
 /*Borrowed Equipments*/
 

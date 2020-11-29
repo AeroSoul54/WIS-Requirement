@@ -9,7 +9,16 @@ class Student extends Model
 
 	protected $table = 'students';
 
-    public function borrowed_books(){
+    public function borrowedBooks(){
     	return $this->belongsToMany(BorrowedBook::class);
+    }
+
+     public function borrowed_equipments()
+    {
+    	return $this->belongsToMany(borrowed_equipment::class);
+    }
+    
+    public function borrowed_devices(){
+    	return $this->belongsToMany(borrowed_devices::class);
     }
 }

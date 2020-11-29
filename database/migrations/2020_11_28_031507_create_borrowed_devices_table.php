@@ -15,8 +15,8 @@ class CreateBorrowedDevicesTable extends Migration
     {
         Schema::create('borrowed_devices', function (Blueprint $table) {
             $table->id();
-            $table->integer("device_id");
-            $table->integer('student_id');
+            $table->unsignedInteger("device_id");
+            $table->unsignedInteger('student_id');
             $table->date('date_time_borrowed');
             $table->date('return_due_date');
             $table->date('date_returned');

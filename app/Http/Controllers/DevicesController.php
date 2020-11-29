@@ -13,8 +13,12 @@ class DevicesController extends Controller
         return view ('devices.index',compact('devices'));
     }
     
-            
     
+    public function show(Device $device)
+    {
+        
+        return view('devices.show', compact('device'));
+    }
     public function create()
     {
         
@@ -24,8 +28,8 @@ class DevicesController extends Controller
     public function store()
     {
         request()->validate([
-        'name' => 'required',
-        'serial_number' => 'required'
+            'name' => 'required',
+            'serial_number' => 'required'
         ]);
 
         $device = new Device;
@@ -45,7 +49,7 @@ class DevicesController extends Controller
         request()->validate([
             'name' => 'required',
             'serial_number' => 'required'
-            ]);
+        ]);
 
 
 

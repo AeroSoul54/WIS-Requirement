@@ -13,12 +13,12 @@
 <div class="row">
 	<div class="col-first">
         <div class="input-field col s6">
-          <input placeholder="ex. The Fault in our Stars" type="text" class="validate" name="title" value="{{ $book->Title }}">
+          <input placeholder="ex. The Fault in our Stars" type="text" class="validate" name="title" value="{{ $book->Title }}" required>
           <label>Book Title</label>
         </div>    
 
         <div class="input-field col s6">
-          <input  placeholder="ex. John Green" type="text" class="validate" name="author" value="{{ $book->Author }}">
+          <input  placeholder="ex. John Green" type="text" class="validate" name="author" value="{{ $book->Author }}" required>
           <label>Author</label>
         </div>
 
