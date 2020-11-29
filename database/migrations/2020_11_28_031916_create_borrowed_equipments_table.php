@@ -15,8 +15,7 @@ class CreateBorrowedEquipmentsTable extends Migration
     {
         Schema::create('borrowed_equipments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('student_id');
-            $table->unsignedInteger('equipment_id'); 
+            $table->string('name');
             $table->integer('number_of_item');
             $table->date('rent_start_date');
             $table->date('rent_end_date');

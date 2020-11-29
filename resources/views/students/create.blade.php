@@ -4,9 +4,10 @@
     <h5>Create Student Form</h5>
     <form method="POST" action="/students">
         @csrf
+        
         <div class="form-group" >
             <label for="inputIDofStudent">Student ID</label>
-            <input type="number" class="form-control" id="inputIDofStudent" name="id_number">
+            <input type="number" class="form-control" id="inputIDofStudent" name="student_id">
           </div>
           <div class="form-group" >
             <label for="inputFirstNameOfStudent">First Name</label>
