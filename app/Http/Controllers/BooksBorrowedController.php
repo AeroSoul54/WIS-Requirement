@@ -41,40 +41,37 @@ class BooksBorrowedController extends Controller
         $borrowedBook->student_id = request()->student_id;
         $borrowedBook->dateTime_borrowed = request()->dateTime_borrowed;
         $borrowedBook->due_date = request()->due_date;
-        //$borrowedBook->date_returned = request()->date_returned;
+        $borrowedBook->date_returned = request()->date_returned;
         $borrowedBook->save();
         return redirect('/rental_history/books');
 
 
     }
-
     public function edit (BorrowedBook $borrowedBook)
     {
         return view('book-rents.edit',compact('borrowedBook'));
     }
-
     public function update(BorrowedBook $borrowedBook)
     {
-        $borrowedBook->book_id = request()->book_id;
-        $borrowedBook->student_id = request()->student_id;
-        $borrowedBook->dateTime_borrowed = request()->dateTime_borrowed;
-        $borrowedBook->due_date = request()->due_date;
-        $borrowedBook->date_returned = request()->date_returned;
-        $borrowedBook->Penalty_in_peso = request()->Penalty_in_Peso;
-        $borrowedBook->save();
-
-         $validator = request()->validate([
+        request()->validate([
             'book_id' => 'required',
             'student_id' => 'required',
             'dateTime_borrowed' => 'required',
             'due_date' => 'required',
-            'date_returned' => 'required',
-            'Penalty_in_Peso' => 'required'
             ]);
-        
-        return redirect('/rental_history/books/');
-    }
+            
 
+        $borrowedBook->book_id = request()->device_id;
+        $borrowedBook->student_id = request()->student_id;
+        $borrowedBook->dateTime_borrowed = request()->date_time_borrowed;
+        $borrowedBook->due_date = request()->return_due_date;
+        $borrowedBook->date_returned = request()->date_returned;
+
+        $borrowedBook->save();
+        
+        return redirect('/rental_history/books');
+
+    }
     public function delete(BorrowedBook $borrowedBook)
     {
         $borrowedBook->delete();

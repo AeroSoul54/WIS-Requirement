@@ -1,10 +1,6 @@
 @extends('layouts.master')
 @section('container')
-<body>
-	<h3>Equipments</h3>
-	<a href="/equipment/create">Create Form</a>
-	
-	<div class="container">
+<div class="container">
         <h1>Equipments</h1>
         <a href="/equipments/create">Add Equipment</a>
         <br />
@@ -32,7 +28,7 @@
             </tr> 
             @endforeach
         </tbody>
-    </table>		
+    </table>
 </div>
-</body>
+    
 @endsection

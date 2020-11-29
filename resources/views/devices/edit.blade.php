@@ -19,7 +19,6 @@
           value="{{$device->serial_number}}">
           </div>
         
-          
    
         <button type="submit" class="btn btn-primary">Submit</button>
       </form> 
