@@ -26,7 +26,10 @@ class StudentsController extends Controller
     }
     public function store()
     {
+
+       
         $student = new Student;
+        $student->id_number = request()->id_number;
         $student->first_name = request()->first_name;
         $student->last_name = request()->last_name;
         $student->college_department = request()->college_department;
@@ -41,6 +44,7 @@ class StudentsController extends Controller
 
     public function update(Student $student)
     {
+        $student->id_number = request()->id_number;
         $student->first_name = request()->first_name;
         $student->last_name = request()->last_name;
         $student->college_department = request()->college_department;

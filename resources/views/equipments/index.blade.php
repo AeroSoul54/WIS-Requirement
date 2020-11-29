@@ -1,10 +1,10 @@
 @extends('layouts.master')
 @section('container')
 <div class="container">
-    <h1>Equipments</h1>
-    <a href="/equipments/create">Add Equipment</a>
-    <br />
-    <br />
+        <h1>Equipments</h1>
+        <a href="/equipments/create">Add Equipment</a>
+        <br />
+        <br />
     <table class="table">
         <thead>
             <tr>

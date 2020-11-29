@@ -134,6 +134,7 @@ Route::put('/equipments/{equipment}', 'EquipmentsController@update');
 Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
 
 
+
 /*Login*/
 
 Route::get('/login', 'LoginController@index')->name('login');
