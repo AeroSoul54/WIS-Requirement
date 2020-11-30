@@ -1,12 +1,13 @@
 @extends('layouts.master')
 @section('container')
 <body>
-	<h3>Borrowed Equipments</h3>
-	<a href="/borrowed_equipments/create">Create Form</a>
 	
-	<div class="container-fluid">
-
-
+	
+	<div class="container">
+		<h3>Borrowed Equipments</h3>
+		<a href="/borrowed_equipments/create">Create Form</a>
+		<br>
+		<br>
 		<table class="table">
 			<thead>
 				<tr>
@@ -19,8 +20,6 @@
 					<th>Rent Start Date</th>
 					<th>Rent End Date</th>
 					<th>Actions</th>
-					<th>ID Number</th>
-
 				</tr>
 			</thead>
 			<tbody>
@@ -41,15 +40,36 @@
 						|
 						<a href="/borrowed_equipments/{{ $borrowed_equipment->id }}/delete">Delete</a>
 					</td>
-					<td>
-					@foreach($borrowed_equipment->students as $student)
-					{{ $student->id_number }}
-					@endforeach
-				</td>  
 				</tr>
 				@endforeach
 			</tbody> 
 		</table>
+
+		<br>
+		<br>
+		<div class="row col-md-6">
+			<!--second table-->
+			<h3>Student Info</h3>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>ID Number</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>College Department</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach($borrowed_equipment->students as $student)
+					<td>{{ $student->id_number }}</td>
+					<td>{{ $student->first_name }}</td>
+					<td>{{ $student->last_name }}</td>
+					<td>{{ $student->college_department }}</td> 
+					@endforeach
+				</tbody> 
+			</table>
+		</div>
 	</div>
+
 </body>
 @endsection
