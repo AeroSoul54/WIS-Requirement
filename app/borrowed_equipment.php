@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class borrowed_equipment extends Model
 {
     protected $table = 'borrowed_equipments';
+    protected $fillable = ['number_of_item'];
 
     public function equipment()
     {

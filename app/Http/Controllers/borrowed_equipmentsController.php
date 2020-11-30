@@ -31,7 +31,6 @@ class borrowed_equipmentsController extends Controller
 
         request()->validate([
 
-            'name' => 'required',
             'number_of_item' => 'required',
             'facility' => 'required',
             'facilitator' => 'required',
@@ -41,7 +40,6 @@ class borrowed_equipmentsController extends Controller
         ]);
 
     	$borrowed_equipment = new borrowed_equipment;
-        $borrowed_equipment->name = request()->name;
         $borrowed_equipment->number_of_item = request()->number_of_item;
         $borrowed_equipment->facility = request()->facility;
         $borrowed_equipment->facilitator = request()->facilitator;
@@ -55,7 +53,7 @@ class borrowed_equipmentsController extends Controller
     public function edit(borrowed_equipment $borrowed_equipment) 
     { 
         $facilities = ['Sports Center', 'Multimedia'];
-        return view('borrowed_equipments.edit', compact('equipment', 'facilities'));
+        return view('borrowed_equipments.edit', compact('borrowed_equipment', 'facilities'));
     }
 
     public function update(borrowed_equipment $borrowed_equipment)
@@ -63,7 +61,6 @@ class borrowed_equipmentsController extends Controller
 
         $validated_fields = request()->validate([
 
-            'name' => 'required',
             'number_of_item' => 'required',
             'facility' => 'required',
             'facilitator' => 'required',

@@ -20,10 +20,6 @@
 					</select>
 				</div>
 				<div class="form-group col-md-6">
-					<strong><label for="exampleInputEmail1">Name of the Equipment:</label></strong>
-					<input type="text" class="form-control" id="exampleInputPassword1" name="name" value="{{ $borrowed_equipment->name}}">
-				</div>
-				<div class="form-group col-md-6">
 					<strong><label for="exampleInputEmail1">Number of Equipments:</label></strong>
 					<input type="text" class="form-control" id="exampleInputPassword1" name="number_of_item" value="{{ $borrowed_equipment->number_of_item}}">
 				</div>
@@ -39,10 +35,13 @@
 					<strong><label for="exampleInputEmail1">Rent End Date:</label></strong>
 					<input type="text" class="form-control" id="exampleInputPassword1" name="rent_end_date" placeholder="YYYY-MM-DD" value="{{ $borrowed_equipment->rent_end_date}}">
 				</div>
-
-				<button type="submit" class="btn btn-primary">Submit</button> 
+				<div class="container">
+				<button type="submit" class="btn btn-primary">Submit</button>
+				</div> 
 			</form>
+
 		</div>
+
 	</div>
 </body>
 @endsection
