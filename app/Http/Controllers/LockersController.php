@@ -54,9 +54,10 @@ class LockerController extends Controller
     	
          return redirect('/lockers');
     }
-    public function delete(Locker $locker)
+    
+    public function delete(Locker $locker) 
     {
         $locker->delete();
         return redirect('/lockers');
     }
-}
+
