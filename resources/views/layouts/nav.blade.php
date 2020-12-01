@@ -35,7 +35,7 @@
                 <a class="nav-link" href="/borrowed_equipments">Borrowed Equipments</a>
             </li>
              <li class="nav-item">
-                <a class="nav-link" href="/borrowed_devices" >Locker Renting</a>
+                <a class="nav-link" href="/locker_rents" >Locker Renting</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/login" target="_blank">Login</a>

@@ -59,20 +59,12 @@ Route::put('/students/{student}','StudentsController@update');//update
 Route::get('/students/{student}/delete','StudentsController@delete');//Delete
 
 /*Books*/
-//show all
 Route::get('/books', 'BooksController@index');
-// GET create display form
 Route::get('/books/create', 'BooksController@create');
-//New record
 Route::post('/books', 'BooksController@store');
-//WILDCARDS
-// PUT edit display form
 Route::get('/books/{book}/edit', 'BooksController@edit');
-// Edit a book record
 Route::put('/books/{book}', 'BooksController@update');
-// GET view individually
 Route::get('/books/{book}', 'BooksController@show');
-// GET delete 
 Route::delete('/books/{book}', 'BooksController@remove');
 
 //books borrowed
@@ -105,14 +97,23 @@ Route::get('/equipments/{equipment}/edit', 'EquipmentsController@edit');
 Route::put('/equipments/{equipment}', 'EquipmentsController@update');
 Route::get('/equipments/{equipment}/delete', 'EquipmentsController@delete');
 
+/*Locker Rents*/
+Route::get('/locker_rents','LockerRentings@index');//index
+Route::get('/locker_rents/create','LockerRentings@create');//create
+Route::get('/locker_rents/{locker_renting}','LockerRentings@show');//show
+Route::post('/locker_rents','LockerRentings@store'); //store
+Route::get('/locker_rents/{locker_renting}/edit','LockerRentings@edit');//edit
+Route::put('/locker_rents/{locker_renting}','LockerRentings@update');//update
+Route::get('/locker_rents/{locker_renting}/delete','LockerRentings@delete');//Delete
+
+
 /*Locker*/
-Route::get('/lockers','LockersController@index');//index
-Route::get('/lockers/create','LockersController@create');//create
-Route::get('/lockers/{locker}','LockersController@show');//show
-Route::post('/lockers','LockersController@store'); //store
-Route::get('/lockers/{locker}/edit','LockersController@edit');//edit
-Route::put('/lockers/{locker}','LockersController@update');//update
-Route::get('/lockers/{locker}/delete','LockersController@delete');//Delete
+Route::get('/lockers', 'LockersController@index');
+Route::get('/lockers/create', 'LockersController@create');
+Route::post('/lockers', 'LockersController@store');
+Route::get('/lockers/{locker}/edit', 'LockersController@edit');
+Route::put('/lockers/{locker}', 'LockersController@update');
+Route::get('/lockers/{locker}/delete', 'LockersController@delete');
 
 
 /*Login*/
