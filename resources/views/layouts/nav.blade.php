@@ -23,6 +23,9 @@
                 <a class="nav-link" href="/devices" >Devices</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/lockers" >Lockers</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/borrowed_devices" >Borrowed Devices</a>
             </li>
             <li class="nav-item">
@@ -31,13 +34,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="/borrowed_equipments">Borrowed Equipments</a>
             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/borrowed_devices" >Locker Renting</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="/login" target="_blank">Login</a>
             </li> 
           
         </ul>
-        
-
         <form class="form-inline mt-2 mt-md-0">
      
            

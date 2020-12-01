@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('content')
+@section('container')
 <div class="container">
 	<h5>Edit Locker Form</h5>
 	<form method="POST" action="/lockers/{{ $locker->id }}">

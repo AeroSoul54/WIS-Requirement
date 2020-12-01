@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use App\Locker;
 use Illuminate\Http\Request;
 
-class LockerController extends Controller
+class LockersController extends Controller
 {
     public function index()
     {
     	//get all of the rooms
-    	$locker = Locker::get();
+    	$lockers = Locker::get();
     	return view ('lockers.index', compact('lockers'));
     	;
     }
@@ -20,7 +20,7 @@ class LockerController extends Controller
     }
     public function create()
     {
-    	$building_name = ['Main', 'Nursing'; 'Science'];
+    	$building_name = ['Main', 'Nursing', 'Science'];
     	return view('lockers.create', compact('buildings'));
     }
 
@@ -38,16 +38,16 @@ class LockerController extends Controller
     }
     public function edit(Locker $locker)
     {
-    	$building_name = ['Main', 'Nursing'; 'Science'];
-        return view('lockers.edit', compact('locker' 'building_name'));
+    	$building_name = ['Main', 'Nursing', 'Science'];
+        return view('lockers.edit', compact('locker', 'building_name'));
     }
     public function update(Locker $locker)
     {
     	$locker->update([
     	'building_name'       => request()->building_name,
-    	'locker_floor'        => request()->locker_floor
-    	'rent_sdate'          => request()->rent_sdate
-    	'rent_edate'          => request()->rent_edate
+    	'locker_floor'        => request()->locker_floor,
+    	'rent_sdate'          => request()->rent_sdate,
+    	'rent_edate'          => request()->rent_edate,
     	'reservation_status'  => request()->reservation_status
 
     ]);
@@ -60,4 +60,4 @@ class LockerController extends Controller
         $locker->delete();
         return redirect('/lockers');
     }
-
+}

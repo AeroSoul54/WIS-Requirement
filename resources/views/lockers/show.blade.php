@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('content')
+@section('container')
 <div class="container">
 	<h5>Lockers</h5>
 	<h5>Building Name:      {{$locker-> building name}}</h5>
