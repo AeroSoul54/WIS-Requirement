@@ -13,7 +13,7 @@ $factory->define(borrowed_equipment::class, function (Faker $faker) {
         'rent_start_date' => $faker->date(),
         'rent_end_date' => $faker->date(),
         'facility' => $faker->company(),
-        'facilitator' => $faker->userName()
+        'facilitator' => $faker->name()
     ];
 });
 
