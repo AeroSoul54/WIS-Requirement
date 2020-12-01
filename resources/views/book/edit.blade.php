@@ -50,7 +50,7 @@
     </form>
 
 </div>
-<h6><a href="/books">Cancel</a></h6>
+<h6><a href="/">Cancel</a></h6>
 </div>
 
 

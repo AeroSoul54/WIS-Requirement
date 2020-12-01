@@ -9,7 +9,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto ">
             <li class="nav-item">
                 <a class="nav-link" href="/students">Students</a>
             </li>
@@ -23,19 +23,25 @@
                 <a class="nav-link" href="/devices" >Devices</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/rental_history/devices" >Borrowed Devices</a>
+                <a class="nav-link" href="/lockers" >Lockers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/borrowed_devices" >Borrowed Devices</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/rental_history/books" >Borrowed Books</a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="/borrowed_equipments">Borrowed Equipments</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/locker_rents" >Locker Renting</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="/login" target="_blank">Login</a>
             </li> 
           
         </ul>
-        
-
         <form class="form-inline mt-2 mt-md-0">
      
            

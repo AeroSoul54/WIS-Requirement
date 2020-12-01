@@ -47,23 +47,13 @@ class BooksBorrowedController extends Controller
 
 
     }
-
     public function edit (BorrowedBook $borrowedBook)
     {
         return view('book-rents.edit',compact('borrowedBook'));
     }
-
     public function update(BorrowedBook $borrowedBook)
     {
-        $borrowedBook->book_id = request()->book_id;
-        $borrowedBook->student_id = request()->student_id;
-        $borrowedBook->dateTime_borrowed = request()->dateTime_borrowed;
-        $borrowedBook->due_date = request()->due_date;
-        $borrowedBook->date_returned = request()->date_returned;
-        $borrowedBook->Penalty_in_peso = request()->Penalty_in_Peso;
-        $borrowedBook->save();
-
-         $validator = request()->validate([
+        $validator = request()->validate([
             'book_id' => 'required',
             'student_id' => 'required',
             'dateTime_borrowed' => 'required',
@@ -71,10 +61,20 @@ class BooksBorrowedController extends Controller
             'date_returned' => 'required',
             'Penalty_in_Peso' => 'required'
             ]);
+            
+
+        
+        $borrowedBook->book_id = request()->book_id;
+        $borrowedBook->student_id = request()->student_id;
+        $borrowedBook->dateTime_borrowed = request()->dateTime_borrowed;
+        $borrowedBook->due_date = request()->due_date;
+        $borrowedBook->date_returned = request()->date_returned;
+        $borrowedBook->Penalty_in_peso = request()->Penalty_in_Peso;
+        $borrowedBook->save();
         
         return redirect('/rental_history/books/');
-    }
 
+    }
     public function delete(BorrowedBook $borrowedBook)
     {
         $borrowedBook->delete();

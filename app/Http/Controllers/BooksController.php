@@ -39,13 +39,13 @@ class BooksController extends Controller
     	$book->Category = request()->category;
     	$book->save();
 
-        $validator = request()->validate([
+    	$validator = request()->validate([
         'title' => 'required',
         'author' => 'required',
         'category' => 'required']);
 
 
-    	return redirect('/books'); 
+        return redirect('/books'); 
     }
 
 //Update Record
@@ -57,12 +57,12 @@ class BooksController extends Controller
     	$book->Category = request()->category;
     	$book->save();
 
-        $validator = request()->validate([
+    	$validator = request()->validate([
         'title' => 'required',
         'author' => 'required',
         'category' => 'required']);
 
-    	return redirect('/books'); 
+        return redirect('/books'); 
     }
 
  // Edit
