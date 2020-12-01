@@ -41,7 +41,7 @@
 						<a href="/borrowed_equipments/{{ $borrowed_equipment->id }}/delete">Delete</a>
 					</td>
 				</tr>
-				@endforeach
+			
 			</tbody> 
 		</table>
 
@@ -72,4 +72,5 @@
 	</div>
 
 </body>
+@endforeach
 @endsection

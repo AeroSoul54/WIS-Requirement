@@ -2,14 +2,14 @@
 @section('container')
 <div class="container">
     <h5>Edit Borrowed Devices</h5>
-    <form method="POST" action="/borrowed_devices/{{ $borrowed_device->id }}">
+    <form method="POST" action="/borrowed_device/devices/{{ $borrowed_device->id }}">
       @method('PUT')    
       @csrf
           
         
         <div class="form-group" >
             <label for="inputNameOfDevice">Device ID</label>
-            <input type="number" class="form-control" id="nputNameOfDevice" name="device_id"
+            <input type="number" class="form-control" id="inputNameOfDevice" name="device_id"
             value="{{$borrowed_device->device_id}}">
           </div>
         
