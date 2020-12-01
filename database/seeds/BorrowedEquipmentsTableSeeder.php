@@ -12,7 +12,7 @@ class BorrowedEquipmentsTableSeeder extends Seeder
     public function run()
     {
 
-    	$borrowed_equipments = factory(\App\borrowed_equipment::class, 15)->create();
+    $borrowed_equipments = factory(\App\borrowed_equipment::class, 15)->create();
 
     }
 }
