@@ -24,6 +24,9 @@
                     <a href="/equipments/{{ $equipment->id }}/edit">Edit</a>
                     |
                     <a href="/equipments/{{ $equipment->id }}/delete">Delete</a>
+                    |
+                    <a href="/borrowed_equipments/create">Create Borrowed Equipments Form</a>
+                   
                 </td>
             </tr> 
             @endforeach

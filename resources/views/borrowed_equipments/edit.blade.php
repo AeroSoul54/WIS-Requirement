@@ -10,7 +10,7 @@
 			@method('PUT')
 			@csrf
 			<div class="row">
-				<div class="form-group" >
+				<div class="form-group col-md-6">
 					<label for="inputNameOfDevice">Equipment ID</label>
 					<input type="number" class="form-control" id="InputNameOfDevice" name="equipment_id">
 				</div>

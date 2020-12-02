@@ -43,7 +43,7 @@
 					</td>
 					<td>
 						@foreach($borrowed_equipment->students as $student)
-						{{ $student->id_number }}</a>
+						<a href="/students/{{ $student->id }}">{{ $student->id_number }}</a>
 						@endforeach
 					</td>
 				</tr>

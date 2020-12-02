@@ -43,12 +43,14 @@
       <ul class="navbar-nav ml-auto mt-2 mt-md-0">
         <div class="btn-group dropleft">
             <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Account
+            {{ auth()->user()->name }}
         </button>
         <div class="dropdown-menu">
+            <a class="dropdown-item" href="/users">Account</a>
             <a class="dropdown-item" href="/login">Login</a>
             <a class="dropdown-item" href="/logout">Logout</a>
-            <a class="dropdown-item" href="/register">Register</a>       
+            <a class="dropdown-item" href="/register">Register</a> 
+                  
         </div>
     </div>
 </ul>
