@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Student;
+use App\student;
 use Illuminate\Http\Request;
 
 class StudentsController extends Controller
@@ -12,7 +12,7 @@ class StudentsController extends Controller
         $students = student::get();
         return view ('students.index',compact('students'));
     }
-    public function show(Student $student)
+    public function show(student $student)
     {
    
         return view('students.show', compact('student'));
@@ -26,7 +26,7 @@ class StudentsController extends Controller
     }
     public function store()
     {
-        $student = new Student;
+        $student = new student;
         $student->id_number = request()->id_number;
         $student->first_name = request()->first_name;
         $student->last_name = request()->last_name;
@@ -35,12 +35,12 @@ class StudentsController extends Controller
         return redirect('/students');
 
     }
-    public function edit (Student $student)
+    public function edit (student $student)
     {
         return view('students.edit',compact('student'));
     }
 
-    public function update(Student $student)
+    public function update(student $student)
     {
         $student->id_number = request()->id_number;
         $student->first_name = request()->first_name;
@@ -50,7 +50,7 @@ class StudentsController extends Controller
         return redirect('/students');
 
     }
-    public function delete(Student $student)
+    public function delete(student $student)
     {
         $student->delete();
         return redirect('/students');
