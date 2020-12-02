@@ -2,7 +2,7 @@
 @section('container')
 <div class="container">
     <h5>Edit Borrowed Devices</h5>
-    <form method="POST" action="/borrowed_device/devices/{{ $borrowed_device->id }}">
+    <form method="POST" action="/borrowed_devices/{{ $borrowed_device->id }}">
       @method('PUT')    
       @csrf
           

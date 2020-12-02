@@ -32,7 +32,7 @@ class BooksBorrowedController extends Controller
         request()->validate([
             'book_id' => 'required',
             'student_id' => 'required',
-            'dateTime_borrowed' => 'required',
+            //'dateTime_borrowed' => 'required',
             'due_date' => 'required',
             ]);
 
@@ -41,7 +41,7 @@ class BooksBorrowedController extends Controller
         $borrowedBook->student_id = request()->student_id;
         $borrowedBook->dateTime_borrowed = request()->dateTime_borrowed;
         $borrowedBook->due_date = request()->due_date;
-        //$borrowedBook->date_returned = request()->date_returned;
+        $borrowedBook->date_returned = request()->date_returned;
         $borrowedBook->save();
         return redirect('/rental_history/books');
 
