@@ -19,7 +19,7 @@ class CreateBorrowedDevicesTable extends Migration
             $table->unsignedInteger('student_id');
             $table->date('date_time_borrowed');
             $table->date('return_due_date');
-            $table->date('date_returned');
+            $table->date('date_returned')->nullable();
             $table->timestamps();
         });
     }
