@@ -25,36 +25,34 @@
             <li class="nav-item">
                 <a class="nav-link" href="/lockers" >Lockers</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/borrowed_devices" >Borrowed Devices</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/rental_history/books" >Borrowed Books</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/borrowed_equipments">Borrowed Equipments</a>
-            </li>
-             <li class="nav-item">
-                <a class="nav-link" href="/locker_rents" >Locker Renting</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/login" target="_blank">Login</a>
-            </li> 
-          
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-     
-           
-                <a class="nav-link" href="/register" >Register</a>
-          
 
-          
-        
-                <a class="nav-link" href="/logout">Logout</a>
-    
-           
-        </form>
+            <!--dropdown-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Borrowed Sections
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/borrowed_devices">Borrowed Devices</a>
+                  <a class="dropdown-item" href="/rental_history/books">Borrowed Books</a>
+                  <a class="dropdown-item" href="/borrowed_equipments">Borrowed Equipments</a>
+                  <a class="dropdown-item" href="/locker_rents">Locker Renting</a>
+              </div>
+          </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+        <div class="btn-group dropleft">
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Account
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="/login">Login</a>
+            <a class="dropdown-item" href="/logout">Logout</a>
+            <a class="dropdown-item" href="/register">Register</a>       
+        </div>
     </div>
+</ul>
+</div>
 </div>
 
 
