@@ -11,6 +11,6 @@ class booksBorroweSeeder extends Seeder
      */
     public function run()
     {
-        //
+         $borrowed_books = factory(\App\BorrowedBook::class, 15)->create();
     }
 }

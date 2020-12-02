@@ -11,6 +11,6 @@ class booksSeeder extends Seeder
      */
     public function run()
     {
-        //
+         $books = factory(App\Book::class, 15)->create();
     }
 }
