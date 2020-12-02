@@ -16,6 +16,6 @@ class borrowed_equipment extends Model
 
     public function students()
     {
-    	return $this->hasMany(Student::class, 'borrowed_equipments_id');
+    	return $this->hasMany(Student::class, 'id_number', 'student_id');
     }
 }

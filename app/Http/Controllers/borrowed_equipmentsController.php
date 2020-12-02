@@ -32,6 +32,7 @@ class borrowed_equipmentsController extends Controller
         request()->validate([
 
             'number_of_item' => 'required',
+            'student_id' => 'required',
             'facility' => 'required',
             'facilitator' => 'required',
             'rent_start_date' => 'required',
@@ -41,6 +42,8 @@ class borrowed_equipmentsController extends Controller
 
     	$borrowed_equipment = new borrowed_equipment;
         $borrowed_equipment->number_of_item = request()->number_of_item;
+        $borrowed_equipment->equipment_id = request()->equipment_id;
+        $borrowed_equipment->student_id = request()->student_id;
         $borrowed_equipment->facility = request()->facility;
         $borrowed_equipment->facilitator = request()->facilitator;
         $borrowed_equipment->rent_start_date = request()->rent_start_date;
@@ -62,6 +65,8 @@ class borrowed_equipmentsController extends Controller
         $validated_fields = request()->validate([
 
             'number_of_item' => 'required',
+            'equipment_id' => 'required',
+            'student_id' => 'required',
             'facility' => 'required',
             'facilitator' => 'required',
             'rent_start_date' => 'required',
