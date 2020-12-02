@@ -5,7 +5,6 @@
     @include('layouts.errors')
     <form method="POST" action="/borrowed_devices">
         @csrf
-        
         <div class="form-group" >
             <label for="inputNameOfDevice">Device ID</label>
             <input type="number" class="form-control" id="nputNameOfDevice" name="device_id">

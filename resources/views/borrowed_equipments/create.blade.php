@@ -4,11 +4,21 @@
 <body>
 	<div class="container">
 		<h4>Create Equipments Form</h4>
+		<i>*id number without dash</i>
+		<br />
 		<br />
 		@include('layouts.errors')
 		<form method="POST" action="/borrowed_equipments">
 			@csrf
 			<div class="row">
+				<div class="form-group col-md-6">
+	            <label for="inputNameOfDevice">Equipment ID</label>
+	            <input type="number" class="form-control" id="inputNameOfDevice" name="equipment_id">
+	          </div>
+				<div class="form-group col-md-6">
+	            <label for="inputStudentId">Student ID*</label>
+	            <input type="number" class="form-control" id="inputStudentId" name="student_id">
+	          	</div>
 				<div class="form-group col-md-6">
 					<strong><label for="exampleInputEmail1">Facility:</label></strong>
 					<br />
@@ -25,7 +35,7 @@
 				
 				<div class="form-group col-md-6">
 					<strong><label for="exampleInputEmail1">Number of Equipments:</label></strong>
-					<input type="text" class="form-control" id="exampleInputPassword1" name="number_of_item">
+					<input type="number" class="form-control" id="exampleInputPassword1" name="number_of_item">
 				</div>
 				<div class="form-group col-md-6">
 					<strong><label for="exampleInputEmail1">Facilitator:</label></strong>
