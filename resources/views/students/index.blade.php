@@ -9,7 +9,7 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Student ID</th>
+                <th>ID Number</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>College Department</th>

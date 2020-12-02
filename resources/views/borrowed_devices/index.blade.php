@@ -23,11 +23,9 @@
                <td>{{ $borrowed_device->id }}</td>  
                <td>{{ $borrowed_device->date_time_borrowed }}</td>     
                <td>{{ $borrowed_device->return_due_date }}</td>     
-               <a href="/borrowed_device/devices/{{ $borrowed_device->id }}/edit">Edit</a>
-               | {{ $borrowed_device->date_returned }}
-               <td><a href="/borrowed_device/devices/{{ $borrowed_device->id }}/edit">Edit</a> </td>
-               
-               <td><a href="/borrowed_device/devices/{{ $borrowed_device->id }}">{{ $borrowed_device->device->id }}</a></td>     
+             <td>  <a href="/borrowed_devices/{{ $borrowed_device->id }}/edit">Edit</a> | {{ $borrowed_device->date_returned }}</td>
+
+               <td><a href="/borrowed_devices/{{ $borrowed_device->id }}">{{ $borrowed_device->device->id }}</a></td>     
                
                <td>{{ $borrowed_device->device->name }}</td>
                <td>

@@ -20,12 +20,11 @@
                 <td>{{ $device->name }}</td>
                 <td>{{ $device->serial_number }}</td>            
                 <td>
-                    <a href="/devices/{{ $device->id }}">Show</a>
-                |
                     <a href="/devices/{{ $device->id }}/edit">Edit</a>
                 |
                       <a href="/devices/{{ $device->id }}/delete">Delete</a>
-                    
+                |
+                        <a href="/borrowed_devices/create"> create new rent history</a>
                    
               
                 </td>

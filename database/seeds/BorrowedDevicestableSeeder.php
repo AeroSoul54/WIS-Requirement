@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class StudentsTableSeeder extends Seeder
+class BorrowedDevicestableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class StudentsTableSeeder extends Seeder
      */
     public function run()
     {
-        $students = factory(\App\Student::class, 15)->create();
+        $borrowed_devices = factory(\App\borrowed_device::class, 15)->create();
     }
 }

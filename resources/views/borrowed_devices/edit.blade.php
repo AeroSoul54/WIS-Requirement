@@ -9,7 +9,7 @@
         
         <div class="form-group" >
             <label for="inputNameOfDevice">Device ID</label>
-            <input type="number" class="form-control" id="nputNameOfDevice" name="device_id"
+            <input type="number" class="form-control" id="inputNameOfDevice" name="device_id"
             value="{{$borrowed_device->device_id}}">
           </div>
         

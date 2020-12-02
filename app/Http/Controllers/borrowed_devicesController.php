@@ -34,7 +34,7 @@ class borrowed_devicesController extends Controller
             'student_id' => 'required',
             'date_time_borrowed' => 'required',
             'return_due_date' => 'required',
-            'date_returned' => 'required',
+    
             ]);
 
         $borrowed_device = new borrowed_device;
@@ -58,7 +58,6 @@ class borrowed_devicesController extends Controller
             'device_id' => 'required',
             'student_id' => 'required',
             'date_time_borrowed' => 'required',
-            'return_due_date' => 'required',
             'date_returned' => 'required',
             ]);
             
