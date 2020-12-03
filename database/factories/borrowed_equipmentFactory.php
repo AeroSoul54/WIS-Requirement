@@ -7,7 +7,9 @@ use Faker\Generator as Faker;
 
 $factory->define(borrowed_equipment::class, function (Faker $faker) {
     return [
-        'student_id' => mt_rand(1,3), 
+        'student_id' => function () {
+            return factory(App\Student::class)->create()->id_number;
+        }, 
         'equipment_id' => mt_rand(1,4), 
         'number_of_item' => mt_rand(0,15),
         'rent_start_date' => $faker->date(),

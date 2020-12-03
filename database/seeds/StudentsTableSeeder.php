@@ -13,4 +13,5 @@ class StudentsTableSeeder extends Seeder
     {
         $students = factory(\App\Student::class, 15)->create();
     }
+   
 }
