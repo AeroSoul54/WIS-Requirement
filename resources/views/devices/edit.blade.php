@@ -19,8 +19,8 @@
           value="{{$device->serial_number}}">
           </div>
         
-   
         <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/devices" class="btn btn-danger">Cancel</a> 
       </form> 
 </div>
     

@@ -5,5 +5,5 @@
 <h5>Name of the Device : {{ $device->name}}</h5>
 <h5>Serial Number : {{ $device->serial_number}}</h5>
 </div>
-    
+    <a href="/devices" class="btn btn-danger">Back</a> 
 @endsection

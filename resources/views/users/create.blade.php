@@ -32,6 +32,7 @@
 				</div>
 			</div>
 			<button type="submit" class="btn btn-primary" style="margin-left: 5px;">Submit</button>
+			<a href="/users" class="btn btn-danger">Cancel</a>
 		</form>
 	</div>
 

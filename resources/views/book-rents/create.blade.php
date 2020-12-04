@@ -35,11 +35,12 @@
             <input type="number"  class="form-control" id="inputReturnDue" name="Penalty_in_Peso" step="0.01">
           </div>
           <br><br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button> 
+        <a href="/rental_history/books" class="btn btn-danger">Cancel</a>
       </form>
 
 
-      <p><a href="/rental_history/books">Back</a></p> 
+     
 </div>
 
 

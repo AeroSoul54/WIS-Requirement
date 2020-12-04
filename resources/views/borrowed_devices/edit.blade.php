@@ -35,7 +35,9 @@
             value="{{$borrowed_device->date_returned}}">
           </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-      </form> 
+        <a href="/borrowed_devices" class="btn btn-danger">Cancel</a> 
+      </form>
+
 </div>
     
 @endsection

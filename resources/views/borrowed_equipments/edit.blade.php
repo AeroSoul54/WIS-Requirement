@@ -46,6 +46,7 @@
 				<div class="container">
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</div> 
+				<a href="/borrowed_equipments" class="btn btn-danger">Cancel</a> 
 			</form>
 
 		</div>

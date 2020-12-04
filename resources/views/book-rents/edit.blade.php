@@ -39,6 +39,7 @@
     </div>
     
     <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/rental_history/books" class="btn btn-danger">Cancel</a> 
   </form> 
 </div>
 

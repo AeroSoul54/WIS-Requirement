@@ -32,6 +32,7 @@
             @endforeach
         </tbody>
     </table>
+    <a href="/dashboard" class="btn btn-danger">Back</a> 
 </div>
     
 @endsection

@@ -21,7 +21,7 @@
       <input type="text" class="form-control" id="inputModelName" name="category" placeholder="e.g Fiction">
     </div>
     <button class="btn btn-primary" type="submit" name="action">Submit</button>
-    <a href="/" class="btn btn-danger">Cancel</a>
+    <a href="/books" class="btn btn-danger">Cancel</a>
   </form>
 </div>
 @endsection

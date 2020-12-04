@@ -59,22 +59,22 @@
 			<div class="row">
 				<!--  -->
 				<div class="feature-box col-lg-4">
-					<a href="/devices"><i class="icon fas fa-mobile-alt fa-2x"></i></a>
-					<h3>Devices</h3>
+					<a href="/devices"><i class="icon fas fa-mobile-alt fa-2x"></i>
+					<h3>Devices</h3></a>
 					<p>Add a device to be borrowed.</p>
 				</div>
 
 				<!--   -->
 				<div class="feature-box col-lg-4">
-					<a href="/equipments"><i class="icon fas fa-basketball-ball fa-2x"></i></a>
-					<h3>Equipments</h3>
+					<a href="/equipments"><i class="icon fas fa-basketball-ball fa-2x"></i>
+					<h3>Equipments</h3></a>
 					<p>Add an equipment to be borrowed.</p>
 				</div>
 
 				<!--   -->
 				<div class="feature-box col-lg-4">
-					<a href="/lockers"><i class="icon fas fa-key fa-2x"></i></a>
-					<h3>Lockers</h3>
+					<a href="/lockers"><i class="icon fas fa-key fa-2x"></i>
+					<h3>Lockers</h3></a>
 					<p>Add a locker to be rented.</p>
 				</div>
 			</div>
@@ -84,14 +84,14 @@
 		<section id="features"> 
 			<div class="row">
 				<div class="feature-box col-lg-6" >
-					<a href="/students"><i class="icon fas fa-user fa-2x"></i></a>
-					<h3>Students</h3>
+					<a href="/students"><i class="icon fas fa-user fa-2x"></i>
+					<h3>Students</h3></a>
 					<p>Add a device to be borrowed.</p>
 				</div>
 
 				<div class="feature-box col-lg-6">
-					<a href="/rental_history/books"><i class="icon fas fa-book fa-2x"></i></a>
-					<h3>Books</h3>
+					<a href="/rental_history/books"><i class="icon fas fa-book fa-2x"></i>
+					<h3>Books</h3></a>
 					<p>Add a book to be borrowed.</p>
 				</div>
 			</div>

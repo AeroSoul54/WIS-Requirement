@@ -17,6 +17,7 @@
       value="{{$equipment->model}}">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/equipments" class="btn btn-danger">Cancel</a> 
   </form> 
 </div>
 

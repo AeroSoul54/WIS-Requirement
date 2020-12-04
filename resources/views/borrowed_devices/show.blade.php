@@ -19,7 +19,7 @@
             </tr>
         </tbody>
     </table>
-    <p><a href="/borrowed_devices">Back</a></p>
+    <a href="/borrowed_devices" class="btn btn-danger">Back</a>
 </div> 
 
     

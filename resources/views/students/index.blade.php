@@ -38,6 +38,7 @@
             @endforeach
         </tbody>
     </table>
+    <a href="/students" class="btn btn-danger">Back</a>
 </div>
     
 @endsection

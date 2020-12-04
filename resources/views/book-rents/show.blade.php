@@ -22,6 +22,6 @@
     </table>
     
 </div> 
-<p><a href="/rental_history/books">Back</a></p>
+<a href="/rental_history/books" class="btn btn-danger">Back</a>
     
 @endsection

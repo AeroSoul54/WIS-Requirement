@@ -10,5 +10,6 @@
 	<h4>Email: {{ $user->email }}</h4>
 	<h4>Facility: {{ $user->facility }}</h4>
 </div>
+<a href="/users" class="btn btn-danger">Back</a>
 </body>
 @endsection

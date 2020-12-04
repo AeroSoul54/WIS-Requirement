@@ -13,5 +13,6 @@
 <h4>Reservation Status: {{locker_renting->reservation_status}}</h4>
 
 </div>
+<a href="/lockers" class="btn btn-danger">Back</a>
 </body>
 @endsection

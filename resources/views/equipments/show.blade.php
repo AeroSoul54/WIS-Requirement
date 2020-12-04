@@ -14,5 +14,6 @@
 	<h4>Facilitator: {{ $equipment->facilitator }}</h4>
 
 </div>
+<a href="/equipments" class="btn btn-danger">Back</a> 
 </body>
 @endsection

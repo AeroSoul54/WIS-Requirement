@@ -46,13 +46,9 @@
 </div>
 
 <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
-
+<a href="/books" class="btn btn-danger">Cancel</a>
     </form>
-
 </div>
-<h6><a href="/">Cancel</a></h6>
 </div>
-
-
 @endsection
 

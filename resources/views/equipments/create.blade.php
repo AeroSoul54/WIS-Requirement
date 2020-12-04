@@ -15,7 +15,7 @@
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
-       <a href="/" class="btn btn-danger">Cancel</a>
+       <a href="/equipments" class="btn btn-danger">Cancel</a>
     </form> 
 </div>
 

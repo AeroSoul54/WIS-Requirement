@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @section('container')
 
-<body>
 	<div class="container">
 		<h4>Create Equipments Form</h4>
 		<i>*id number without dash</i>
@@ -50,9 +49,10 @@
 					<input type="text" class="form-control" id="exampleInputPassword1" name="rent_end_date" placeholder="YYYY-MM-DD" >
 				</div>
 
-				<button type="submit" class="btn btn-primary" style="margin-left: 15px;">Submit</button> 
+				<button type="submit" class="btn btn-primary" style="margin-left: 15px;">Submit</button>
+				<a href="/borrowed_equipments" class="btn btn-danger">Cancel</a> 
 			</form>
 		</div>
+
 	</div>
-</body>
 @endsection

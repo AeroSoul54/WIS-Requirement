@@ -50,7 +50,7 @@
         </tbody>
     </table>    
 </div>
-<p><a href="/">Back</a></p>
+<a href="/dashboard" class="btn btn-danger">Back</a>
 </div> 
 
 @endsection

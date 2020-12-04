@@ -22,6 +22,7 @@
             <input type="text"  class="form-control" id="inputCollegeDepartmentOfStudent" name="college_department">
           </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/students" class="btn btn-danger">Cancel</a>
       </form> 
 </div>
     

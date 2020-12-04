@@ -36,15 +36,11 @@
 </table>
 
 <form action="/books/{{ $book->id }}" method="POST"> @csrf @method('DELETE')
-<h6><button class="btn" type="submit">Remove</button></h6>
+<button class="btn btn-danger" type="submit">Remove</button>
+<a href="/books" class="btn btn-danger">Cancel</a>
 </form>
 
 </div>
-
-
-
-<h6><a href="/books">Cancel</a></h6>
-
 
 </div>
 

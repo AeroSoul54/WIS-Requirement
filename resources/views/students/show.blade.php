@@ -8,5 +8,6 @@
 <h5>College Department: {{ $student->college_department}}</h5>
 
 </div>
+<a href="/students" class="btn btn-danger">Back</a>
     
 @endsection

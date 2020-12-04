@@ -34,6 +34,7 @@
 
 
     <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/locker_rents" class="btn btn-danger">Cancel</a> 
   </form>
 </div>
 @endsection

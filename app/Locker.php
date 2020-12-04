@@ -10,7 +10,7 @@ class Locker extends Model
 
 	public function lockerRenting()
     {
-    	return $this->belongsTo(borrowed_equipment::class);
+    	return $this->belongsTo(LockerRenting::class);
     }
 
 }
