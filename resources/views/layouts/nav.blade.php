@@ -4,7 +4,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
-  <a class="navbar-brand" href="/">UC System</a>
+  <a class="navbar-brand" href="/">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -44,7 +44,7 @@
       <div class="btn-group dropleft">
         
         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Account
+        Account
         </button>
         
 

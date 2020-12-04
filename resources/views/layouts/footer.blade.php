@@ -1,7 +1,4 @@
-<br>
-<br>
-<br>
-<br>
+
 
 
 <footer class="mainfooter" role="contentinfo">
@@ -13,10 +10,10 @@
 					<div class="footer-pad">
 						<h4>Needs</h4>
 						<ul class="list-unstyled">
-							<li><a href="#">Books</a></li>
-							<li><a href="#">Equipments</a></li>
-							<li><a href="#">Devices</a></li>
-							<li><a href="#">Lockers</a></li>
+							<li><a href="/books">Books</a></li>
+							<li><a href="/equipments">Equipments</a></li>
+							<li><a href="/devices">Devices</a></li>
+							<li><a href="/lockers">Lockers</a></li>
 						</ul>
 					</div>
 				</div>
@@ -25,10 +22,10 @@
 					<div class="footer-pad">
 						<h4>Borrowed Sections</h4>
 						<ul class="list-unstyled">
-							<li><a href="#">Borrowed Devices</a></li>
-							<li><a href="#">Borrowed Books</a></li>
-							<li><a href="#">Borrowed Equipments</a></li>
-							<li><a href="#">Locker Renting</a></li>
+							<li><a href="/borrowed_equipments">Borrowed Devices</a></li>
+							<li><a href="/rental_history/books">Borrowed Books</a></li>
+							<li><a href="/borrowed_equipments">Borrowed Equipments</a></li>
+							<li><a href="/locker_rents">Locker Renting</a></li>
 						</ul>
 					</div>
 				</div>
