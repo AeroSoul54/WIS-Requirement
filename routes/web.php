@@ -33,13 +33,13 @@ Route::middleware(['auth'])->group(function() {
 	Route::get('/users/{user}/delete','UsersController@delete');
 		/*Devices*/
 
-	Route::get('/devices','devicesController@index');//index
-	Route::get('/devices/create','devicesController@create');//create
-	Route::get('/devices/{device}','devicesController@show');//show
-	Route::post('/devices','devicesController@store'); //store
-	Route::get('/devices/{device}/edit','devicesController@edit');//edit
-	Route::put('/devices/{device}','devicesController@update');//update
-	Route::get('/devices/{device}/delete','devicesController@delete');//Delete
+	Route::get('/devices','DevicesController@index');//index
+	Route::get('/devices/create','DevicesController@create');//create
+	Route::get('/devices/{device}','DevicesController@show');//show
+	Route::post('/devices','DevicesController@store'); //store
+	Route::get('/devices/{device}/edit','DevicesController@edit');//edit
+	Route::put('/devices/{device}','DevicesController@update');//update
+	Route::get('/devices/{device}/delete','DevicesController@delete');//Delete
 
 	//devices = devices_borrowed, device = device_borrowed
 	Route::get('/borrowed_devices','borrowed_devicesController@index');//index
