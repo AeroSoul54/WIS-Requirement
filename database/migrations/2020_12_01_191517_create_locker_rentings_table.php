@@ -15,6 +15,8 @@ class CreateLockerRentingsTable extends Migration
     {
        Schema::create('locker_rentings', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('locker_rent_id');
+            $table->unsignedInteger('student_id');
             $table->date('rent_start_date');
             $table->date('rent_end_date');
             $table->string('reservation_status');
