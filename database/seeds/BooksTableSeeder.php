@@ -1,9 +1,8 @@
 <?php
 
-
 use Illuminate\Database\Seeder;
 
-class booksBorroweSeeder extends Seeder
+class BooksTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +11,6 @@ class booksBorroweSeeder extends Seeder
      */
     public function run()
     {
-        $BorrowedBook= factory(App\BorrowedBook::class, 5)->create();
+        $Book= factory(\App\Book::class, 5)->create();
     }
 }
