@@ -2,7 +2,7 @@
 @section('container')
 <div class="container">
     <h1>Equipments</h1>
-    <a href="/equipments/create">Add Equipment</a>
+    <a href="/equipments/create" class="btn btn-light">Add Equipment</a>
     <br />
     <br />
     <table class="table">
@@ -21,9 +21,12 @@
                 <td>{{ $equipment->name }}</td>
                 <td>{{ $equipment->model}}</td>            
                 <td>
-                    <a href="/equipments/{{ $equipment->id }}/edit">Edit</a>
-                    |
-                    <a href="/equipments/{{ $equipment->id }}/delete">Delete</a>
+                    <a href="/equipments/{{ $equipment->id }}/edit" class="btn btn-success">Edit</a>
+                    
+                    <a href="/equipments/{{ $equipment->id }}/delete" class="btn btn-danger">Delete</a>
+                    
+                    <a href="/borrowed_equipments/create" class="btn btn-light">Create Borrowed Equipments Form</a>
+                   
                 </td>
             </tr> 
             @endforeach

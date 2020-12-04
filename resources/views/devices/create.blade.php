@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('container')
-<div class="container">
+<div class="container col-md-6">
     <h5>Create Device Form</h5>
     @include('layouts.errors')
     <form method="POST" action="/devices">
@@ -18,6 +18,7 @@
           </div>
        
         <button type="submit" class="btn btn-primary">Submit</button>
+         <a href="/" class="btn btn-danger">Cancel</a>
       </form> 
 </div>
     

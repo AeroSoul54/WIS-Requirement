@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             EquipmentsTableSeeder::class,
             DevicesTableSeeder::class,
             StudentsTableSeeder::class,
+            UsersTableSeeder::class
 
         ]);
     }

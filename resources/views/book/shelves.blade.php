@@ -1,10 +1,10 @@
 @extends('layouts.master')
 
 @section('container')
-<h1>Library</h1>
-<a href="/books/create">Borrow a book</a>
-
 <div class="container">
+	<h1>Library</h1>
+	<a href="/books/create" class="btn btn-light">Borrow a book</a>
+	<br />
 	<table class="table">
 		<thead>
 			<tr>
@@ -18,12 +18,12 @@
 		<tbody>
 			
 			@foreach($books as $book)
-	<tr>
-		<td><a href="/books/{{ $book->id }}"> {{ $book->id }} </a></td>
-		<td> {{ $book->Title }} </td>
-		<td> {{ $book->Author }} </td>
-		<td> {{ $book->Category }} </td>
-	</tr>
+			<tr>
+				<td><a href="/books/{{ $book->id }}"> {{ $book->id }} </a></td>
+				<td> {{ $book->Title }} </td>
+				<td> {{ $book->Author }} </td>
+				<td> {{ $book->Category }} </td>
+			</tr>
 			@endforeach
 		</tbody>
 	</table>

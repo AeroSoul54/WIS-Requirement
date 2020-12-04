@@ -2,7 +2,7 @@
 @section('container')
 <div class="container">
     <h1> Devices</h1>
-    <a href="/borrowed_devices/create"> create new rent history</a>
+    <a href="/borrowed_devices/create"> Create Form</a>
 
     <table class="table">
         <thead>

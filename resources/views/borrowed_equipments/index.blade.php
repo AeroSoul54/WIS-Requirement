@@ -3,7 +3,7 @@
 <body>
 	
 	
-	<div class="container">
+	<div class="container-fluid">
 		<h3>Borrowed Equipments</h3>
 		<a href="/borrowed_equipments/create">Create Form</a>
 		<br>
@@ -13,7 +13,7 @@
 				<tr>
 					<th>ID</th>
 					<th>Name</th>
-					<th>Model or Type</th>
+					<th>Model</th>
 					<th>Amount</th>
 					<th>Facility</th>
 					<th>Facilitator</th>
@@ -43,7 +43,7 @@
 					</td>
 					<td>
 						@foreach($borrowed_equipment->students as $student)
-						{{ $student->id_number }}</a>
+						<a href="/students/{{ $student->id }}">{{ $student->id_number }}</a>
 						@endforeach
 					</td>
 				</tr>

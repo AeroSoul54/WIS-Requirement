@@ -24,7 +24,7 @@
                 |
                       <a href="/devices/{{ $device->id }}/delete">Delete</a>
                 |
-                        <a href="/borrowed_devices/create"> create new rent history</a>
+                        <a href="/borrowed_devices/create"> Create Borrowed Devices Form</a>
                    
               
                 </td>
