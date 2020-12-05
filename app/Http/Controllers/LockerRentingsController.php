@@ -6,14 +6,14 @@ use App\LockerRenting;
 use Illuminate\Http\Request;
 
 
-class LockerRentings extends Controller
+class LockerRentingsController extends Controller
 {
     public function index()
     {
     	//get all of the rooms
     	$locker_rentings = LockerRenting::get();
     	return view ('locker_rentings.index', compact('locker_rentings'));
-    	;
+    	
     }
     public function show(LockerRenting $locker_renting)
     {
