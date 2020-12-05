@@ -122,7 +122,6 @@ Route::middleware(['auth'])->group(function() {
 }); // middleware
 
 
-
 	/*Login*/
 
 Route::get('/login', 'LoginController@index')->name('login');
@@ -130,7 +129,3 @@ Route::post('/login', 'LoginController@login');
 Route::get('/register', 'LoginController@register');
 Route::post('/register', 'LoginController@store');	
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
