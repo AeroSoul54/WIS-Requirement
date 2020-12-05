@@ -15,13 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-	return view('welcome');
+	return view('layouts.home');
 });
 
 Route::middleware(['auth'])->group(function() {
 
-	Route::get('/dashboard', 'DashboardController@index');
-	Route::get('/logout', 'LoginController@logout');
+
 
 	/*Users*/
 
@@ -117,16 +116,18 @@ Route::middleware(['auth'])->group(function() {
 	Route::put('/lockers/{locker}', 'LockersController@update');
 	Route::get('/lockers/{locker}/delete', 'LockersController@delete');
 
+	
+	Route::get('/dashboard', 'DashboardController@index');
+	Route::get('/logout', 'LoginController@logout');
+
 }); // middleware
 
 
-/*Login*/
+
+	/*Login*/
 
 Route::get('/login', 'LoginController@index')->name('login');
 Route::post('/login', 'LoginController@login');
 Route::get('/register', 'LoginController@register');
-Route::post('/register', 'LoginController@store');
-
-
-
+Route::post('/register', 'LoginController@store');	
 

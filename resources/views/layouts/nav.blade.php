@@ -44,14 +44,14 @@
       <div class="btn-group dropleft">
         
         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        {{ auth()->user()->name}}
+        Account
         </button>
         
 
         <div class="dropdown-menu">
          
           <a class="dropdown-item" href="/login">Login</a>
-          <a class="dropdown-item" href="/">Logout</a>
+          <a class="dropdown-item" href="/login">Logout</a>
           <a class="dropdown-item" href="/register">Register</a> 
           
         </div>

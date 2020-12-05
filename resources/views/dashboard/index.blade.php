@@ -34,7 +34,7 @@
 					<div class="dropdown-menu">
 
 						<a class="dropdown-item" href="/login">Login</a>
-						<a class="dropdown-item" href="/">Logout</a>
+						<a class="dropdown-item" href="/login">Logout</a>
 						<a class="dropdown-item" href="/register">Register</a> 
 
 					</div>
