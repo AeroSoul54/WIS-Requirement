@@ -20,7 +20,8 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function() {
 
-
+	Route::get('/dashboard', 'DashboardController@index');
+	Route::get('/logout', 'LoginController@logout');
 
 	/*Users*/
 
@@ -117,8 +118,6 @@ Route::middleware(['auth'])->group(function() {
 	Route::get('/lockers/{locker}/delete', 'LockersController@delete');
 
 	
-	Route::get('/dashboard', 'DashboardController@index');
-	Route::get('/logout', 'LoginController@logout');
 
 }); // middleware
 

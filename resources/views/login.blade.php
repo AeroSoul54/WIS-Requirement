@@ -24,7 +24,8 @@
                                     <input type="password" id="password" class="form-control" name="password">
                                 </div>
                             </div>
-                            <br>
+                            <center><a href="/register">Don't have an account? Register first</a></center>
+                             <br>
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     Login
