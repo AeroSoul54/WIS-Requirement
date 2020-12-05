@@ -25,9 +25,9 @@
                <td>{{ $borrowedBook->id }}</td>  
                <td>{{ $borrowedBook->datetime_borrowed }}</td>     
                <td>{{ $borrowedBook->due_date }}</td>  
-               <td> <a href="/rental_history/books/{{ $borrowedBook->id }}/edit" class=" btn btn-success ">Edit</a><br />
+               <td> <a href="/rental_history/books/{{ $borrowedBook->id }}/edit" class=" btn btn-light ">Edit</a><br />
                 {{ $borrowedBook->date_returned }}
-                <td><a href="/rental_history/books/{{ $borrowedBook->id }}/edit" class=" btn btn-success ">Edit</a><br />
+                <td><a href="/rental_history/books/{{ $borrowedBook->id }}/edit" class=" btn btn-light ">Edit</a><br />
                      {{ $borrowedBook->Penalty_in_Peso }}           
                     <td>
                      <a href="/rental_history/books/{{ $borrowedBook->id }}" class=" btn btn-light ">Show</a><br />
