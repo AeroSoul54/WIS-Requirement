@@ -20,8 +20,6 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function() {
 
-	Route::get('/dashboard', 'DashboardController@index');
-	Route::get('/logout', 'LoginController@logout');
 
 	/*Users*/
 
@@ -32,7 +30,7 @@ Route::middleware(['auth'])->group(function() {
 	Route::get('/users/{user}/edit', 'UsersController@edit');
 	Route::put('/users/{user}', 'UsersController@update');
 	Route::get('/users/{user}/delete','UsersController@delete');
-		/*Devices*/
+	/*Devices*/
 
 	Route::get('/devices','DevicesController@index');//index
 	Route::get('/devices/create','DevicesController@create');//create
@@ -122,10 +120,14 @@ Route::middleware(['auth'])->group(function() {
 }); // middleware
 
 
-	/*Login*/
+/*Login*/
 
 Route::get('/login', 'LoginController@index')->name('login');
 Route::post('/login', 'LoginController@login');
 Route::get('/register', 'LoginController@register');
 Route::post('/register', 'LoginController@store');	
+
+
+Route::get('/dashboard', 'DashboardController@index');
+Route::get('/logout', 'LoginController@logout');
 
