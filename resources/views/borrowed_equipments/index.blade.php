@@ -1,11 +1,9 @@
 @extends('layouts.master')
 @section('container')
 <body>
-	
-	
 	<div class="container-fluid">
 		<h3>Borrowed Equipments</h3>
-		<a href="/borrowed_equipments/create">Create Form</a>
+		<a href="/borrowed_equipments/create" class="btn btn-light">Create Form</a>
 		<br>
 		<br>
 		<table class="table">
@@ -35,15 +33,15 @@
 					<td>{{ $borrowed_equipment->rent_start_date}}</td>
 					<td>{{ $borrowed_equipment->rent_end_date}}</td>
 					<td>
-						<a href="/borrowed_equipments/{{ $borrowed_equipment->id }}">Show</a>
-						|
-						<a href="/borrowed_equipments/{{ $borrowed_equipment->id }}/edit">Edit</a>
-						|
-						<a href="/borrowed_equipments/{{ $borrowed_equipment->id }}/delete">Delete</a>
+						<a href="/borrowed_equipments/{{ $borrowed_equipment->id }}" class="btn btn-light btn-sm">Show</a>
+						
+						<a href="/borrowed_equipments/{{ $borrowed_equipment->id }}/edit" class="btn btn-success btn-sm">Edit</a>
+						
+						<a href="/borrowed_equipments/{{ $borrowed_equipment->id }}/delete" class="btn btn-danger btn-sm"> Delete</a>
 					</td>
 					<td>
 						@foreach($borrowed_equipment->students as $student)
-						<a href="/students/{{ $student->id }}">{{ $student->id_number }}</a>
+						<a href="/students/{{ $student->id }}" class="btn btn-light">{{ $student->id_number }}</a>
 						@endforeach
 					</td>
 				</tr>

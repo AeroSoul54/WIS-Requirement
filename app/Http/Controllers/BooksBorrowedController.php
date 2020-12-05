@@ -30,10 +30,13 @@ class BooksBorrowedController extends Controller
     {
 
         request()->validate([
+
             'book_id' => 'required',
             'student_id' => 'required',
-            //'dateTime_borrowed' => 'required',
+            'dateTime_borrowed' => 'required',
+            'date_returned' => 'nullable',
             'due_date' => 'required',
+
             ]);
 
         $borrowedBook = new BorrowedBook;
@@ -41,8 +44,8 @@ class BooksBorrowedController extends Controller
         $borrowedBook->student_id = request()->student_id;
         $borrowedBook->dateTime_borrowed = request()->dateTime_borrowed;
         $borrowedBook->due_date = request()->due_date;
-        $borrowedBook->date_returned = request()->date_returned;
         $borrowedBook->save();
+
         return redirect('/rental_history/books');
 
 
@@ -54,22 +57,22 @@ class BooksBorrowedController extends Controller
     public function update(BorrowedBook $borrowedBook)
     {
         $validator = request()->validate([
+
             'book_id' => 'required',
             'student_id' => 'required',
             'dateTime_borrowed' => 'required',
             'due_date' => 'required',
             'date_returned' => 'required',
             'Penalty_in_Peso' => 'required'
+
             ]);
             
-
-        
         $borrowedBook->book_id = request()->book_id;
         $borrowedBook->student_id = request()->student_id;
         $borrowedBook->dateTime_borrowed = request()->dateTime_borrowed;
         $borrowedBook->due_date = request()->due_date;
         $borrowedBook->date_returned = request()->date_returned;
-        $borrowedBook->Penalty_in_peso = request()->Penalty_in_Peso;
+        $borrowedBook->Penalty_in_Peso = request()->Penalty_in_Peso;
         $borrowedBook->save();
         
         return redirect('/rental_history/books/');

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLockersTable extends Migration
+class CreateLockerRentingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateLockersTable extends Migration
      */
     public function up()
     {
-        Schema::create('lockers', function (Blueprint $table) {
+         Schema::create('locker_rentings', function (Blueprint $table) {
             $table->id();
-            
-            $table->string('building_name');
-            $table->string('locker_floor');
+            $table->unsignedInteger('locker_rent_id');
+            $table->unsignedInteger('student_id');
+            $table->date('rent_start_date');
+            $table->date('rent_end_date');
+            $table->string('reservation_status');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateLockersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lockers');
+        Schema::dropIfExists('locker_rentings');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLockerRentingsTable extends Migration
+class CreateBooksBorrowedTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateLockerRentingsTable extends Migration
      */
     public function up()
     {
-       Schema::create('locker_rentings', function (Blueprint $table) {
+        Schema::create('books_borrowed', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('locker_id');
+            $table->unsignedInteger('book_id');
             $table->unsignedInteger('student_id');
-            $table->date('rent_start_date');
-            $table->date('rent_end_date');
-            $table->string('reservation_status');
+            $table->dateTime('datetime_borrowed');
+            $table->date('due_date');
+            $table->date('date_returned')->nullable();
+            $table->decimal('Penalty_in_Peso', 8, 2)->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateLockerRentingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('locker_rentings');
+        Schema::dropIfExists('books_borrowed');
     }
 }

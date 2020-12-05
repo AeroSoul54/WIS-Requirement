@@ -20,7 +20,7 @@
      <div class="form-group" >
       <label>Date and Time Borrowed</label>
       <input type="" class="form-control" name="dateTime_borrowed"
-      value="{{$borrowedBook->dateTime_borrowed}}" required>
+      value="{{$borrowedBook->datetime_borrowed}}" required>
     </div>
     <div class="form-group">
       <label>Return Due Date</label>

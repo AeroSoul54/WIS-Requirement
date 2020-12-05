@@ -24,7 +24,7 @@
                     <a href="/lockers/{{ $locker->id }}/edit" class="btn btn-success">Edit</a>
                     
                     <a href="/lockers/{{ $locker->id }}/delete" class="btn btn-danger">Delete</a>
-                    <a href="/locker-rents/create" class="btn btn-light">Create Borrowed Locker Form</a>
+                    <a href="/locker_rents/create" class="btn btn-light">Create Borrowed Locker Form</a>
                    
                 </td>
             </tr> 

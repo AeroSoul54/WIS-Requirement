@@ -14,7 +14,7 @@ $factory->define(borrowed_equipment::class, function (Faker $faker) {
         'number_of_item' => mt_rand(0,15),
         'rent_start_date' => $faker->date(),
         'rent_end_date' => $faker->date(),
-        'facility' => $faker->company(),
+        'facility' => $faker->state(),
         'facilitator' => $faker->name()
     ];
 });

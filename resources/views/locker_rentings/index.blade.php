@@ -1,8 +1,10 @@
 @extends('layouts.master')
 @section('container')
 <div class="container">
-	<h5>Locker Renting</h5>
-	<a href="/locker_rents/create">Create Form</a>
+	<h2>Locker Renting</h2>
+	<a href="/locker_rents/create" class="btn btn-light">Create Form</a>
+	<br />
+	<br />
 	<table class="table">
 		<thead>
 			<tr>
@@ -23,11 +25,9 @@
 				<td>{{ $locker_renting->rent_end_date }}</td>
 				<td>{{ $locker_renting->reservation_status }}</td>
 				<td>
-					<a href="/locker_rents/{{ $locker_renting->id}}">Show</a>
-					|
-					<a href="/locker_rents/{{ $locker_renting->id}}/edit">Edit</a>
-					|
-					<a href="/locker_rents/{{ $locker_renting->id}}/delete">Delete</a>
+					<a href="/locker_rents/{{ $locker_renting->id}}" class="btn btn-light">Show</a>
+					<a href="/locker_rents/{{ $locker_renting->id}}/edit" class="btn btn-success">Edit</a>
+					<a href="/locker_rents/{{ $locker_renting->id}}/delete" class="btn btn-danger">Delete</a>
 				</td>
 			</tr>
 			@endforeach

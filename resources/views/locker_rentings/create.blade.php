@@ -3,6 +3,8 @@
 <div class="container">
 	<h5>Create Locker Form</h5>
   <i>*id number without dash</i>
+  <br />
+  <br />
 	<form method="POST" action="/locker_rents">
 		@csrf
     <div class="row">
