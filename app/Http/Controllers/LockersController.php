@@ -10,7 +10,7 @@ class LockersController extends Controller
     public function index()
     {     
         $lockers = Locker::get();
-        return view ('lockers.index',compact('lockers'));
+        return view ('lockers.index', compact('lockers'));
     }
      
     public function create()

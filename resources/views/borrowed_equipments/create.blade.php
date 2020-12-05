@@ -12,13 +12,13 @@
 			@csrf
 			<div class="row">
 				<div class="form-group col-md-6">
-	            <label for="inputNameOfDevice">Equipment ID</label>
-	            <input type="number" class="form-control" id="inputNameOfDevice" name="equipment_id">
-	          </div>
+					<label for="inputNameOfDevice">Equipment ID</label>
+					<input type="number" class="form-control" id="inputNameOfDevice" name="equipment_id">
+				</div>
 				<div class="form-group col-md-6">
-	            <label for="inputStudentId">Student ID*</label>
-	            <input type="number" class="form-control" id="inputStudentId" name="student_id">
-	          	</div>
+					<label for="inputStudentId">Student ID*</label>
+					<input type="number" class="form-control" id="inputStudentId" name="student_id">
+				</div>
 				<div class="form-group col-md-6">
 					<strong><label for="exampleInputEmail1">Facility:</label></strong>
 					<br />

@@ -11,6 +11,14 @@ class BooksTableSeeder extends Seeder
      */
     public function run()
     {
-        $Book= factory(\App\Book::class, 5)->create();
+        $books = [
+        	['Title' => 'Twilight', 'Author' => 'Stephenie Meyer', 'Category' => 'Fiction'],
+        	['Title' => 'The Da Vinci Code', 'Author' => 'Dan Brown', 'Category' => 'Fiction'],
+        	['Title' => 'Harry Potter', 'Author' => 'J.K Rowling', 'Category' => 'Fiction'],
+        	['Title' => 'The Cat in the Hat', 'Author' => 'Dr. Seuss', 'Category' => 'Fiction'],
+        	['Title' => 'The Lightning Thief', 'Author' => 'Rick Riordan', 'Category' => 'Fiction'],
+  		];
+
+  		DB::table('books')->insert($books);
     }
 }

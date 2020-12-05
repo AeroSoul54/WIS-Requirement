@@ -2,7 +2,7 @@
 @section('container')
 <div class="container">
     <h1>Students</h1>
-    <a href="/students/create">Add Student</a>
+    <a href="/students/create" class="btn btn-light">Add Student</a>
     <br />
     <br />
     <table class="table">
@@ -26,12 +26,10 @@
                 <td>{{ $student->college_department }}</td>     
                 <td>
 
-                <a href="/students/{{ $student->id }}">Show</a>
-                |
-                  <a href="/students/{{ $student->id }}/edit">Edit</a>
-                |
+                <a href="/students/{{ $student->id }}" class="btn btn-light">Show</a>
+                <a href="/students/{{ $student->id }}/edit" class="btn btn-success">Edit</a>
                 @csrf
-                 <a href="/students/{{ $student->id }}/delete">Delete</a> 
+                <a href="/students/{{ $student->id }}/delete" class="btn btn-danger">Delete</a> 
                     
                    
                 </td>

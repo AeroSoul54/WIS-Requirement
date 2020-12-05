@@ -17,8 +17,8 @@
 		<tbody>
 			@foreach($locker_rentings as $locker_renting)
 			<tr>
-				<td>{{ $locker_renting->building_name }}</td>
-				<td>{{ $locker_renting->floor }}</td>
+				<td>{{ $locker_renting->locker->building_name }}</td>
+				<td>{{ $locker_renting->locker->locker_floor }}</td>
 				<td>{{ $locker_renting->rent_start_date }}</td>
 				<td>{{ $locker_renting->rent_end_date }}</td>
 				<td>{{ $locker_renting->reservation_status }}</td>

@@ -4,7 +4,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
-  <a class="navbar-brand" href="/">Home</a>
+  <a class="navbar-brand" href="/dashboard">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -44,14 +44,14 @@
       <div class="btn-group dropleft">
         
         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Account
+        {{ auth()->user()->name}}
         </button>
         
 
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="/users">Users</a>
+         
           <a class="dropdown-item" href="/login">Login</a>
-          <a class="dropdown-item" href="/logout">Logout</a>
+          <a class="dropdown-item" href="/">Logout</a>
           <a class="dropdown-item" href="/register">Register</a> 
           
         </div>

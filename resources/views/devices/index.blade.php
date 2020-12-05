@@ -2,7 +2,7 @@
 @section('container')
 <div class="container">
     <h1> Devices</h1>
-    <a href="/devices/create">Add Devices</a>
+    <a href="/devices/create" class="btn btn-light">Add Devices</a>
 
     <table class="table">
         <thead>
@@ -16,23 +16,21 @@
         <tbody>
             @foreach ($devices as $device)
             <tr>
-                 <td>{{ $device->id }}</td>
-                <td>{{ $device->name }}</td>
-                <td>{{ $device->serial_number }}</td>            
-                <td>
-                    <a href="/devices/{{ $device->id }}/edit">Edit</a>
-                |
-                      <a href="/devices/{{ $device->id }}/delete">Delete</a>
-                |
-                        <a href="/borrowed_devices/create"> Create Borrowed Devices Form</a>
-                   
-              
-                </td>
-            </tr>
-                
-            @endforeach
-        </tbody>
-    </table>
+               <td>{{ $device->id }}</td>
+               <td>{{ $device->name }}</td>
+               <td>{{ $device->serial_number }}</td>            
+               <td>
+                <a href="/devices/{{ $device->id }}/edit" class="btn btn-success">Edit</a>
+                <a href="/devices/{{ $device->id }}/delete" class="btn btn-danger">Delete</a>
+                <a href="/borrowed_devices/create" class="btn btn-light"> Create Borrowed Devices Form</a>
+
+
+            </td>
+        </tr>
+
+        @endforeach
+    </tbody>
+</table>
 </div>
-    
+
 @endsection

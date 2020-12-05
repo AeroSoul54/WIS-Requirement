@@ -6,7 +6,7 @@ use App\LockerRenting;
 use Illuminate\Http\Request;
 
 
-class LockerRentingsController extends Controller
+class LockerRentings extends Controller
 {
     public function index()
     {
@@ -27,7 +27,21 @@ class LockerRentingsController extends Controller
 
     public function store()
     {
+    	request()->validate([
+
+       
+            'locker_rent_id' => 'required',
+            'student_id' => 'required',
+            'rent_start_date' => 'required',
+            'rent_end_date' => 'required'
+
+        ]);
+
+
     	$locker_renting = new LockerRenting;
+    	$locker_renting->locker_rent_id = request()->locker_rent_id;
+    	$locker_renting->student_id = request()->student_id;
+    	$locker_renting->rent_start_date = request()->rent_start_date;
     	$locker_renting->rent_start_date = request()->rent_start_date;
     	$locker_renting->rent_end_date = request()->rent_end_date;
     	$locker_renting->reservation_status = request()->reservation_status;
@@ -42,14 +56,18 @@ class LockerRentingsController extends Controller
     }
     public function update(LockerRenting $locker_renting)
     {
-    	$locker_renting->update([
-    	'rent_start_date'          => request()->rent_start_date,
-    	'rent_end_date'          => request()->rent_end_date,
-    	'reservation_status'  => request()->reservation_status
+    	$validated_fields = request()->validate([
 
-    ]);
-    	
-         return redirect('/locker_rents');
+            'locker_rent_id' => 'required',
+            'student_id' => 'required',
+            'rent_start_date' => 'required',
+            'rent_end_date' => 'required'
+
+        ]);
+
+    
+        $locker_renting->update($validated_fields);
+		return redirect('/locker_rents');
     }
     
     public function delete(LockerRenting $locker_renting) 

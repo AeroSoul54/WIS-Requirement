@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
             StudentsTableSeeder::class,
             UsersTableSeeder::class,
             BooksBorrowedTableSeeder::class,
-            BooksTableSeeder::class
+            BooksTableSeeder::class,
+            LockersTableSeeder::class,
+            LockerRentingTableSeeder::class
     ]);
 
     }

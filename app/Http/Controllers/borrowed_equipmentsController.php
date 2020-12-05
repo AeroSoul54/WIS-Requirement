@@ -32,6 +32,7 @@ class borrowed_equipmentsController extends Controller
         request()->validate([
 
             'number_of_item' => 'required',
+            'equipment_id' => 'required',
             'student_id' => 'required',
             'facility' => 'required',
             'facilitator' => 'required',
