@@ -130,3 +130,7 @@ Route::post('/login', 'LoginController@login');
 Route::get('/register', 'LoginController@register');
 Route::post('/register', 'LoginController@store');	
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
